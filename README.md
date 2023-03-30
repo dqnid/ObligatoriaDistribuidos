@@ -12,7 +12,8 @@ Ciclo de vida de un proceso:
 1. Hace 'sleep' entre 0.3 y 0.5s -_esto simula un cálculo_-
 2. Entra en sección crítica distribuida
 3. Permanece en SC entre 0.1 y 0.3s
-- :repeat: Repite este proceso 100 veces
+
+:repeat: Repite este proceso 100 veces
 4. Termina de forma ordenada
 ### Logs
 Cada vez que un proceso entra en la SC escribe en un fichero local:
