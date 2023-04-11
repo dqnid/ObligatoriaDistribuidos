@@ -12,11 +12,11 @@ import javax.ws.rs.core.UriBuilder;
  * Helper class to manage HTTP requests
  * */
 public class ClientHelper {
-	public static String requestEntry(String ip, String port){
+	public static String requestEntry(String ip, String port, int t, int p){
 		Client client=ClientBuilder.newClient();
 		URI uri=UriBuilder.fromUri("http://"+ ip +":" + port + "/ssdd/").build();
 		WebTarget target = client.target(uri);
 	
-		return target.path("process").path("hello").queryParam("msg", "Hola").request(MediaType.TEXT_PLAIN).get(String.class);
+		return target.path("process").path("join").queryParam("t", t).queryParam("p", p).request(MediaType.TEXT_PLAIN).get(String.class);
 	}
 }

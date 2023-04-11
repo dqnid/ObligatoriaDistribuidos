@@ -14,16 +14,33 @@ import persistence.FileHelper;
 import persistence.IpList;
 import util.ClientHelper;
 
+import static util.Constants.TOMADA;
+import static util.Constants.BUSCADA;
+import static util.Constants.LIBERADA;
+
 @Singleton
 @Path("process")
 public class Process {
-	private static int state; //Liberada=0, Buscada=1, Tomada=2 
+	private int state; //Liberada=0, Buscada=1, Tomada=2
+	private int c;
+	private int p;
+	private IpList ipList;
 	
 	@Path("hello")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String petition(@DefaultValue("null") @QueryParam(value="msg") String msg){
 		return msg;
+	}
+	
+	@Path("join")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String join(@DefaultValue("null") @QueryParam(value="t") int t, @DefaultValue("0") @QueryParam(value="p") int p){
+		if (state != TOMADA) {
+			return "go";
+		}
+		return "go";
 	}
 	
 	/*
@@ -33,13 +50,16 @@ public class Process {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String main(@DefaultValue("./config.cfg") @QueryParam(value="cfgfile") String cfgfile){
-		IpList ipList = FileHelper.getListIP(cfgfile);
+		this.ipList = FileHelper.getListIP(cfgfile);
 		String response = "fallo";
-		if (ipList == null) {
-			return response;
-		}
+		this.state = LIBERADA;
+		this.c = 0;
+		this.p = 1; //Configure in config.cfg
+		
+		if (ipList == null) { return response; }
+		
 		for (String[] direction : ipList.getArrayList()) {
-			response = ClientHelper.requestEntry(direction[0], direction[1]);			
+			response = ClientHelper.requestEntry(direction[0], direction[1],this.c, this.p);			
 		}
 		return response;
 	}
