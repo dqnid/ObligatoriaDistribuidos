@@ -16,7 +16,7 @@ public class ClientHelper {
 		Client client=ClientBuilder.newClient();
 		URI uri=UriBuilder.fromUri("http://"+ ip +":" + port + "/ssdd/").build();
 		WebTarget target = client.target(uri);
-	
+		
 		return target.path("process").path("join").queryParam("t", t).queryParam("p", p).request(MediaType.TEXT_PLAIN).get(String.class);
 	}
 }
