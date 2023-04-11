@@ -3,7 +3,7 @@ package util;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-public class Redes {
+public class NetworkHelper {
 	public static String getCurrentIp() {
 		InetAddress localhost = null;
 		try {
