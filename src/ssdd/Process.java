@@ -1,6 +1,10 @@
+/*
+ * Daniel Heras Quesada
+ * Guillermo Vicente González
+ * Sistemas Distribuidos
+ * Universidad de Salamanca
+ * */
 package ssdd;
-
-import java.io.IOException;
 
 import javax.inject.Singleton;
 import javax.ws.rs.DefaultValue;
@@ -26,41 +30,63 @@ public class Process {
 	private int p;
 	private IpList ipList;
 	
-	@Path("hello")
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public String petition(@DefaultValue("null") @QueryParam(value="msg") String msg){
-		return msg;
-	}
-	
+	/*
+	 * Service consumed to enter the SC
+	 * */
 	@Path("join")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String join(@DefaultValue("null") @QueryParam(value="t") int t, @DefaultValue("0") @QueryParam(value="p") int p){
-		if (state != TOMADA) {
-			return "go";
+	public String join(@DefaultValue("null") @QueryParam(value="t") String tj, @DefaultValue("0") @QueryParam(value="p") String pj){
+		if (state == TOMADA || state == BUSCADA && this.isOlderEntrance(this.c, this.p, Integer.parseInt(tj), Integer.parseInt(pj))) {
+			synchronized(this.getClass()) {
+				try {
+					this.getClass().wait();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
 		}
-		return "go";
+		return "go";		
 	}
 	
 	/*
 	 * Main class called to start
+	 * TODO: Add error messages in case of failure
 	 * */
-	@Path("main")
+	@Path("start")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String main(@DefaultValue("./config.cfg") @QueryParam(value="cfgfile") String cfgfile){
+	public String start(@DefaultValue("./config.cfg") @QueryParam(value="cfgfile") String cfgfile){
 		this.ipList = FileHelper.getListIP(cfgfile);
+		this.p = FileHelper.getId(cfgfile);
 		String response = "fallo";
 		this.state = LIBERADA;
 		this.c = 0;
-		this.p = 1; //Configure in config.cfg
 		
-		if (ipList == null) { return response; }
+		if (ipList == null || this.p < 0) { return response; }
 		
+		/*
+		 * "Multicast"
+		 * TODO: use threads and block until all responses came back
+		 * */
 		for (String[] direction : ipList.getArrayList()) {
 			response = ClientHelper.requestEntry(direction[0], direction[1],this.c, this.p);			
 		}
-		return response;
+		this.state = TOMADA;
+		this.c+=1;
+		
+		/*
+		 * Free SC
+		 * */
+		this.state = LIBERADA;
+		synchronized(this.getClass()) {
+			this.getClass().notifyAll();
+		}
+		
+		return "finished";
+	}
+	
+	private Boolean isOlderEntrance(int ti, int pi, int tj, int pj) {
+		return ti < tj || ti == tj && pi < pj;
 	}
 }
