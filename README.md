@@ -2,6 +2,16 @@
 * Sistemas Distribuidos, Universidad de Salamanca
 * Curso 2022 - 2023
 
+## TODO
+- [  ] Definir la estructura del fichero de configuración
+	- [  ] Usar el launcher para que envíe las IPs y los puertos
+- [  ] En start hacer que la petición de entrada a SC sea concurrente (quitar el for), con threads
+- [  ] Hacer otro endpoint GET que se use para notificar
+- [  ] Modificar el join para que guarde los elementos en la cola y responda 1 o 0
+- [  ] Implementar una cola con las direcciones y puertos (en el mismo string) de los procesos solicitantes
+- [  ] Crear el proceso main 'launcher' que llame a los start de todos los procesos
+- [  ] Lanzar de manera no cutre los procesos en un solo Tomcat
+
 ## Detalles del sistema desarrollado
 6 procesos repartidos en 3 nodos que gestionan una zona de exclusión mutua común.
 - Algoritmo de Ricart y Agrawala
