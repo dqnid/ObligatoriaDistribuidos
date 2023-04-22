@@ -14,6 +14,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import persistence.FileHelper;
 import util.ClientHelper;
 
 import static util.Constants.TOMADA;
@@ -32,14 +33,21 @@ public class Process {
 	private String[] ipList; //Formato ip:puerto
 	private String myIp; //Formato ip:puerto
 	
+	@Path("prueba")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String prueba(){
+		return "El server arranca";
+	}
+	
 	/*
 	 * Service consumed to enter the SC
 	 * */
 	@Path("join")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String join(@DefaultValue("null") @QueryParam(value="t") String tj, @DefaultValue("0") @QueryParam(value="p") String pj){
-		if (state == TOMADA || state == BUSCADA && this.isOlderEntrance(this.c, this.p, Integer.parseInt(tj), Integer.parseInt(pj))) {
+	public String join(@DefaultValue("0") @QueryParam(value="t") int tj, @DefaultValue("0") @QueryParam(value="p") int pj){
+		if (state == TOMADA || state == BUSCADA && this.isOlderEntrance(this.c, this.p, tj, pj)) {
 			synchronized(this.getClass()) {
 				try {
 					this.getClass().wait();
@@ -48,43 +56,49 @@ public class Process {
 				}
 			}
 		}
-		return "go";		
+		return "go";
 	}
 	
 	/*
 	 * Main class called to start
-	 * TODO: Add error messages in case of failure
 	 * */
 	@Path("start")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String start(@DefaultValue("") @QueryParam(value="iplist") String iplist,@QueryParam(value="id") int id, @QueryParam(value="myIp") String myIp){
-		this.ipList = iplist.split(","); //Es evitable si usamos un objeto para comunicar
+	public String start(@DefaultValue("") @QueryParam(value="ipList") String ipList,@DefaultValue("0") @QueryParam(value="id") int id,@QueryParam(value="myIp") String myIp){
+		this.ipList = ipList.split(","); //Es evitable si usamos un objeto para comunicar
 		this.p = id;
 		this.myIp = myIp;
-		String response = "fallo";
 		this.state = LIBERADA;
 		this.c = 0;
+				
+		if (ipList == null || this.p < 0) { return "Fallo"; }
 		
-		System.out.println("Soy " + id + " - " + this.myIp + " y conozco a " + iplist);
-		
-		if (ipList == null || this.p < 0) { return response; }
-		
-		/*
-		 * "Multicast"
-		 * TODO: use threads to launch
-		 * */
-		
-
-		this.state = TOMADA;
-		this.c+=1;
-		
-		/*
-		 * Free SC
-		 * */
-		this.state = LIBERADA;
-		synchronized(this.getClass()) {
-			this.getClass().notifyAll();
+		for (int i = 0; i < 10; i++) 
+		{	
+			int response = ClientHelper.requestEntry(this.ipList, this.c, this.p);
+			if (response < 0) {
+				return "Fallo";
+			}
+	
+			this.state = TOMADA;
+			this.c+=1;
+			System.out.println("Soy " + this.p + " y entro en la zona");
+			FileHelper.log("/home/danih/.config/ssddlog.log", this.p, 'E', System.currentTimeMillis());
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			FileHelper.log("/home/danih/.config/ssddlog.log", this.p, 'S', System.currentTimeMillis());
+			
+			/*
+			 * Free SC
+			 * */
+			this.state = LIBERADA;
+			synchronized(this.getClass()) {
+				this.getClass().notifyAll();
+			}
 		}
 		
 		return "finished";

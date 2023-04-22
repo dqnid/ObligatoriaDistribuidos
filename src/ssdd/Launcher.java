@@ -35,7 +35,7 @@ public class Launcher extends Thread{
 		URI uri=UriBuilder.fromUri("http://"+ mi_ip + "/ssdd/").build();
 		WebTarget target = client.target(uri);
 		
-		String respuesta = target.path("process").path("start").queryParam("iplist", ip_list_nodos).queryParam("id", mi_id).queryParam("myIp", mi_ip).request(MediaType.TEXT_PLAIN).get(String.class);
+		String respuesta = target.path("process").path("start").queryParam("ipList", ip_list_nodos).queryParam("id", mi_id).queryParam("myIp", mi_ip).request(MediaType.TEXT_PLAIN).get(String.class);
 		System.out.println(respuesta);
 	}
 	
