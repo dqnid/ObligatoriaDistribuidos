@@ -76,6 +76,14 @@ public class Process {
 		
 		for (int i = 0; i < 10; i++) 
 		{	
+			this.state = BUSCADA;
+			try {
+				Thread.sleep((long)Math.random()*200);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			
 			int response = ClientHelper.requestEntry(this.ipList, this.c, this.p);
 			if (response < 0) {
 				return "Fallo";
@@ -83,7 +91,6 @@ public class Process {
 	
 			this.state = TOMADA;
 			this.c+=1;
-			System.out.println("Soy " + this.p + " y entro en la zona");
 			FileHelper.log("/home/danih/.config/ssddlog.log", this.p, 'E', System.currentTimeMillis());
 			try {
 				Thread.sleep(500);
@@ -91,7 +98,8 @@ public class Process {
 				e.printStackTrace();
 			}
 			FileHelper.log("/home/danih/.config/ssddlog.log", this.p, 'S', System.currentTimeMillis());
-			
+			System.out.println("Soy " + this.p + " y entro en la zona");
+
 			/*
 			 * Free SC
 			 * */

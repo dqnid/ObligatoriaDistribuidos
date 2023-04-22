@@ -12,6 +12,7 @@
 - [x] Crear el proceso main 'launcher' que llame a los start de todos los procesos
 - [  ] Lanzar de manera no cutre los procesos en un solo Tomcat
 - [x] Generar logs
+- [x] Corregir error de interbloqueo durante los 2 primero ciclos 
 
 ## Detalles del sistema desarrollado
 6 procesos repartidos en 3 nodos que gestionan una zona de exclusión mutua común.
