@@ -58,13 +58,15 @@ public class Process {
 	@Path("start")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String start(@DefaultValue("") @QueryParam(value="iplist") String iplist,@QueryParam(value="id") String id, @QueryParam(value="myIp") String myIp){
-		this.ipList = iplist.split(";");
-		this.p = Integer.parseInt(id);
+	public String start(@DefaultValue("") @QueryParam(value="iplist") String iplist,@QueryParam(value="id") int id, @QueryParam(value="myIp") String myIp){
+		this.ipList = iplist.split(","); //Es evitable si usamos un objeto para comunicar
+		this.p = id;
 		this.myIp = myIp;
 		String response = "fallo";
 		this.state = LIBERADA;
 		this.c = 0;
+		
+		System.out.println("Soy " + id + " - " + this.myIp + " y conozco a " + iplist);
 		
 		if (ipList == null || this.p < 0) { return response; }
 		
