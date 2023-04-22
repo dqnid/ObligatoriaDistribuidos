@@ -14,11 +14,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import persistence.FileHelper;
-import persistence.IpList;
 import util.ClientHelper;
 
 import static util.Constants.TOMADA;
+
+import java.util.ArrayList;
+
 import static util.Constants.BUSCADA;
 import static util.Constants.LIBERADA;
 
@@ -26,9 +27,10 @@ import static util.Constants.LIBERADA;
 @Path("process")
 public class Process {
 	private int state; //Liberada=0, Buscada=1, Tomada=2
-	private int c;
-	private int p;
-	private IpList ipList;
+	private int c; //Contador
+	private int p; //Id del proceso
+	private String[] ipList; //Formato ip:puerto
+	private String myIp; //Formato ip:puerto
 	
 	/*
 	 * Service consumed to enter the SC
@@ -56,9 +58,10 @@ public class Process {
 	@Path("start")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String start(@DefaultValue("./config.cfg") @QueryParam(value="cfgfile") String cfgfile){
-		this.ipList = FileHelper.getListIP(cfgfile);
-		this.p = FileHelper.getId(cfgfile);
+	public String start(@DefaultValue("") @QueryParam(value="iplist") String iplist,@QueryParam(value="id") String id, @QueryParam(value="myIp") String myIp){
+		this.ipList = iplist.split(";");
+		this.p = Integer.parseInt(id);
+		this.myIp = myIp;
 		String response = "fallo";
 		this.state = LIBERADA;
 		this.c = 0;
@@ -67,11 +70,10 @@ public class Process {
 		
 		/*
 		 * "Multicast"
-		 * TODO: use threads and block until all responses came back
+		 * TODO: use threads to launch
 		 * */
-		for (String[] direction : ipList.getArrayList()) {
-			response = ClientHelper.requestEntry(direction[0], direction[1],this.c, this.p);			
-		}
+		
+
 		this.state = TOMADA;
 		this.c+=1;
 		
