@@ -47,7 +47,8 @@ public class Process {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String join(@DefaultValue("0") @QueryParam(value="t") int tj, @DefaultValue("0") @QueryParam(value="p") int pj){
-		if (state == TOMADA || state == BUSCADA && this.isOlderEntrance(this.c, this.p, tj, pj)) {
+		if (state == TOMADA || state == BUSCADA && this.selfHasOlderEntrance(this.c, this.p, tj, pj)) {
+			this.c = (tj < this.c ? this.c : tj) +1; //Ajuste tel tiempo lógico de Lamport diapo 33 tema 4
 			synchronized(this.getClass()) {
 				try {
 					this.getClass().wait();
@@ -55,6 +56,8 @@ public class Process {
 					e.printStackTrace();
 				}
 			}
+		} else {
+			this.c = (tj < this.c ? this.c : tj) +1; //Ajuste tel tiempo lógico de Lamport diapo 33 tema 4
 		}
 		return "go";
 	}
@@ -112,7 +115,7 @@ public class Process {
 		return "finished";
 	}
 	
-	private Boolean isOlderEntrance(int ti, int pi, int tj, int pj) {
+	private Boolean selfHasOlderEntrance(int ti, int pi, int tj, int pj) {
 		return ti < tj || ti == tj && pi < pj;
 	}
 }
