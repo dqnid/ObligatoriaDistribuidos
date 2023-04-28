@@ -1,5 +1,6 @@
 #!/bin/bash
 
+./stop.sh
 for dir in ../tomcat/*/
 do
 	chmod +x $dir/bin/*
@@ -9,5 +10,7 @@ do
 
 	$dir/bin/startup.sh
 done
-java -jar ssdd_launcher.jar ../ssdd.cfg ../log/
-mergeLogs.sh
+if test $1 == "main"; then
+	java -jar ssdd_launcher.jar ../ssdd.cfg .log/
+	mergeLogs.sh
+fi
