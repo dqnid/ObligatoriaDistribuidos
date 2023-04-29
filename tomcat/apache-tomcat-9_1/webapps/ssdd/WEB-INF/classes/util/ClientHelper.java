@@ -63,17 +63,4 @@ public class ClientHelper extends Thread{
 		}
 		return 0;
 	}
-	public static int startProcess(String ip, String port, String cfgfile) 
-	{
-		Client client=ClientBuilder.newClient();
-		URI uri=UriBuilder.fromUri("http://"+ ip +":" + port + "/ssdd/").build();
-		WebTarget target = client.target(uri);
-		if (target.path("node").path("start").queryParam("cfgfile", cfgfile).request(MediaType.TEXT_PLAIN).get(String.class).equals("finished")) 
-		{
-			return 0;
-		} else 
-		{
-			return  -1;
-		}
-	}
 }

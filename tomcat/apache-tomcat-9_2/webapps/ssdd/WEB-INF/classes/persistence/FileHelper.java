@@ -37,6 +37,47 @@ public class FileHelper {
 		return 0;
 	}
 	
+	public static int adjustLog(String route_to_file, long delay){
+		File file = new File(route_to_file);
+	
+		String output_route_to_file = "" + route_to_file.split(".l")[0] + "_adjusted.log";
+		
+		File file_output = new File(output_route_to_file);
+   		
+   	 	String newline = System.getProperty("line.separator");
+
+		if (file.exists()) {
+			Scanner file_reader;
+			try {
+				file_reader = new Scanner(file);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+				return -1;
+			}
+			while (file_reader.hasNextLine()) {
+                String[] line = file_reader.nextLine().split(" ");
+                long time = Long.parseLong(line[2]);
+                time += delay;
+                try {
+                    file_output.createNewFile();
+    	        	FileWriter myWriter = new FileWriter(output_route_to_file,true);
+    	        	myWriter.append("" + line[0] + " " + line[1] + " " + time);
+    	        	myWriter.append(newline);
+    	        	myWriter.close();
+    	        } catch (IOException e) {
+    	        	System.out.println("Error en la escritura del log.");
+    				file_reader.close();
+    	        	e.printStackTrace();
+    	        	return -1;
+    	        }
+			}
+			file_reader.close();
+			return 0;
+		}else {
+			return -1;
+		}
+	}
+	
 	public static ArrayList<String> getListIP(String route_to_file){
 		ArrayList<String> ipList = new ArrayList<>();
 		File file = new File(route_to_file);
@@ -50,11 +91,10 @@ public class FileHelper {
 			}
 			while (file_reader.hasNextLine()) {
                 String line = file_reader.nextLine();
-                if (line.startsWith("#")) {
+                if (line.startsWith("ntp") || line.startsWith("#")) {
                 	continue;
                 }
                 ipList.add(line);
-     
 			}
 			file_reader.close();
 			return ipList;
@@ -63,7 +103,7 @@ public class FileHelper {
 		}
 	}
 	
-	public static String getFormatedIPList(String route_to_file, String ip){
+	public static String getFormatedIPList(String route_to_file, String destination_ip){
 		String ipList = "";
 		File file = new File(route_to_file);
 		if (file.exists()) {
@@ -76,7 +116,7 @@ public class FileHelper {
 			}
 			while (file_reader.hasNextLine()) {
                 String line = file_reader.nextLine();
-                if (line.startsWith("#") || line.startsWith(ip))
+                if (line.startsWith("ntp") || line.startsWith("#") || line.startsWith(destination_ip))
                 	continue;
                 if (ipList == "")
                 	ipList += line;
@@ -85,6 +125,33 @@ public class FileHelper {
 			}
 			file_reader.close();
 			return ipList;
+		}else {
+			return null;
+		}
+	}
+	
+	public static String getNTPServer(String route_to_file){
+		String ntpServer="";
+		File file = new File(route_to_file);
+		if (file.exists()) {
+			Scanner file_reader;
+			try {
+				file_reader = new Scanner(file);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+				return null;
+			}
+			while (file_reader.hasNextLine()) {
+                String line = file_reader.nextLine();
+                if (line.startsWith("ntp="))
+                {
+                	ntpServer = line.split("=")[1];
+                	break;
+                }
+                	
+			}
+			file_reader.close();
+			return ntpServer == "" ? null : ntpServer;
 		}else {
 			return null;
 		}

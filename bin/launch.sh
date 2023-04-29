@@ -4,7 +4,7 @@
 for dir in ./tomcat/*/
 do
 	chmod +x $dir/bin/*
-	now="$(date | awk '{print $4}')"
+	now="$(date +%H%M%S)"
 	mkdir ./log/old/$now
 	mv ./log/*.log ./log/old/$now/
 	rm -rf $dir/ssdd/
@@ -15,6 +15,5 @@ done
 if test $# -eq 1; then
 	if test $1 == "main"; then
 		java -jar ./bin/ssdd_launcher.jar ./ssdd.cfg ./log
-		./bin/mergeLogs.sh
 	fi
 fi

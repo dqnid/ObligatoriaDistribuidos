@@ -14,15 +14,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
+import ntp.NTPHelper;
 import persistence.FileHelper;
 import util.ClientHelper;
 
 import static util.Constants.TOMADA;
-
-import java.util.ArrayList;
-
 import static util.Constants.BUSCADA;
 import static util.Constants.LIBERADA;
+
 import java.util.Random;
 
 @Singleton
@@ -33,7 +32,7 @@ public class Node {
 	private int ci;
 	private int p;
 	private String[] ipList;
-	private String myIp;
+	private long[] ntp_values = {0,0};
 	
 	@Path("prueba")
 	@GET
@@ -68,15 +67,18 @@ public class Node {
 	@Path("start")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
-	public String start(@DefaultValue("") @QueryParam(value="ipList") String ipList,@DefaultValue("0") @QueryParam(value="id") int id,@QueryParam(value="myIp") String myIp,@QueryParam(value="logFolder") String logFolder){
+	public String start(@QueryParam(value="ipList") String ipList,@QueryParam(value="id") int id,@QueryParam(value="logFolder") String logFolder,@QueryParam(value="ntpServer") String ntpServer){
+		long[] ntp_values_pre;
+		long[] ntp_values_post;
+		
 		this.ipList = ipList.split(",");
 		this.p = id;
-		this.myIp = myIp;
 		this.state = LIBERADA;
 		this.ci = 0;
 				
 		if (ipList == null || this.p < 0) { return "Fallo"; }
 		
+		ntp_values_pre = NTPHelper.requestNTP(ntpServer, 10);
 		Random rand = new Random();
 		
 		for (int i = 0; i < 100; i++) 
@@ -115,11 +117,28 @@ public class Node {
 				this.getClass().notifyAll();
 			}
 		}
+
+		ntp_values_post = NTPHelper.requestNTP(ntpServer, 10);
+		this.ntp_values[0] = (ntp_values_pre[0] + ntp_values_post[0]) / 2;
+		this.ntp_values[1] = (ntp_values_pre[1] + ntp_values_post[1]) / 2;
+
+		FileHelper.adjustLog(""+logFolder+"/"+this.p+".log", this.ntp_values[1]);
 		
-		return "finished";
+		return "Finished with NTP offset= " + this.ntp_values[0] + " and delay= " + this.ntp_values[1];
 	}
 	
 	private Boolean selfHasOlderEntrance(int ti, int pi, int tj, int pj) {
 		return ti < tj || ti == tj && pi < pj;
+	}
+	
+	@Path("getntp")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String getntp(){
+		long[]  t = {0,0};
+
+		t[0] = System.currentTimeMillis();
+		t[1] = System.currentTimeMillis();
+		return ""+t[0]+";"+t[1];
 	}
 }
