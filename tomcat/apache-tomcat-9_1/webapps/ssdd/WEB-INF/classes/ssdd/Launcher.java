@@ -12,15 +12,16 @@ import javax.ws.rs.core.UriBuilder;
 import persistence.FileHelper;
 
 public class Launcher extends Thread{
-	String cfgFile = "/home/danih/.config/ssddcfg.cfg";
+	String cfgFile;
 	String mi_ip;
 	String logFolder;
 	int mi_id;
 	
-	public Launcher(String mi_ip, int mi_id, String logFolder) {
+	public Launcher(String mi_ip, int mi_id, String cfgFile,String logFolder) {
 		this.mi_ip = mi_ip;
 		this.mi_id = mi_id;
 		this.logFolder = logFolder;
+		this.cfgFile = cfgFile;
 	}
 	
 	public void run() {
@@ -44,14 +45,17 @@ public class Launcher extends Thread{
 	public static void main(String[] args) {
 		String cfgFile;
 		String logFolder;
+		int id;
 
 		if (args.length != 2) {
 			System.out.println("Asumiendo ubicación del fichero de cfg y la carpeta de logs");
-			cfgFile = "/home/danih/.config/ssdd";
-			logFolder = "/home/danih/.config/ssdd/ssdd.cfg";
+			cfgFile = "/home/danih/.config/ssdd/ssdd.cfg";
+			logFolder = "/home/danih/.config/ssdd";
+		} else {
+			cfgFile = args[0];
+			logFolder = args[1];
 		}
-		cfgFile = args[0];
-		logFolder = args[1];
+		
 		ArrayList<String> ipList = FileHelper.getListIP(cfgFile);
 		if (ipList == null) {
 			System.out.println("Fichero de configuración inaccesible");
@@ -61,12 +65,13 @@ public class Launcher extends Thread{
 			System.out.println("Directorio de logs inaccesible");
 			System.exit(-3);
 		}*/
+		
 		/*
 		 * Recorremos la lista de IPs
 		 * */
-		int id = 0;
+		id = 0;
 		for (String current_ip : ipList) {
-			Launcher current_launcher = new Launcher(current_ip, id, logFolder);
+			Launcher current_launcher = new Launcher(current_ip, id, cfgFile, logFolder);
 			current_launcher.start();
 			id++;
 		}

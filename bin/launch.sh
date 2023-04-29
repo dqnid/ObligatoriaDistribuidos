@@ -1,18 +1,20 @@
 #!/bin/bash
 
-./stop.sh
-for dir in ../tomcat/*/
+./bin/stop.sh
+for dir in ./tomcat/*/
 do
 	chmod +x $dir/bin/*
-	rm ../log/*
+	now="$(date | awk '{print $4}')"
+	mkdir ./log/old/$now
+	mv ./log/*.log ./log/old/$now/
 	rm -rf $dir/ssdd/
-	cp ./ssdd.war $dir/webapps/ssdd.war
+	cp ./bin/ssdd.war $dir/webapps/ssdd.war
 
 	$dir/bin/startup.sh
 done
-if test $# -gt 1; then
+if test $# -eq 1; then
 	if test $1 == "main"; then
-		java -jar ssdd_launcher.jar ../ssdd.cfg ../../log/
-		mergeLogs.sh
+		java -jar ./bin/ssdd_launcher.jar ./ssdd.cfg ./log
+		./bin/mergeLogs.sh
 	fi
 fi
