@@ -39,7 +39,7 @@ public class Node {
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String prueba(){
-		return "El server arranca";
+		return "El server arranca"  + System.getProperty("user.dir");
 	}
 	
 	/*
