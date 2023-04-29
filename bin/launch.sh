@@ -10,7 +10,9 @@ do
 
 	$dir/bin/startup.sh
 done
-if test $1 == "main"; then
-	java -jar ssdd_launcher.jar ../ssdd.cfg .log/
-	mergeLogs.sh
+if test $# -gt 1; then
+	if test $1 == "main"; then
+		java -jar ssdd_launcher.jar ../ssdd.cfg ../../log/
+		mergeLogs.sh
+	fi
 fi

@@ -305,3 +305,57 @@
 28-Apr-2023 10:59:47.420 INFORMACIÓN [main] org.apache.catalina.core.StandardWrapper.unload Esperando por [1] instancia(s) para recuperar su espacio reservado
 28-Apr-2023 10:59:48.363 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
 28-Apr-2023 10:59:48.373 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]
+28-Apr-2023 22:58:26.483 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.73
+28-Apr-2023 22:58:26.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 15:33:40 UTC
+28-Apr-2023 22:58:26.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.73.0
+28-Apr-2023 22:58:26.487 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+28-Apr-2023 22:58:26.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.2.7-arch1-1
+28-Apr-2023 22:58:26.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Apr-2023 22:58:26.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+28-Apr-2023 22:58:26.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.6+10
+28-Apr-2023 22:58:26.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Apr-2023 22:58:26.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2
+28-Apr-2023 22:58:26.488 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2
+28-Apr-2023 22:58:26.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Apr-2023 22:58:26.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+28-Apr-2023 22:58:26.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+28-Apr-2023 22:58:26.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Apr-2023 22:58:26.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Apr-2023 22:58:26.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/conf/logging.properties
+28-Apr-2023 22:58:26.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Apr-2023 22:58:26.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Apr-2023 22:58:26.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Apr-2023 22:58:26.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Apr-2023 22:58:26.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Apr-2023 22:58:26.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2
+28-Apr-2023 22:58:26.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2
+28-Apr-2023 22:58:26.500 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/temp
+28-Apr-2023 22:58:26.501 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/local/lib64::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+28-Apr-2023 22:58:26.779 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8081"]
+28-Apr-2023 22:58:26.815 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [470] milliseconds
+28-Apr-2023 22:58:26.857 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Apr-2023 22:58:26.858 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+28-Apr-2023 22:58:26.873 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/ssdd.war]
+28-Apr-2023 22:58:26.897 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/ssdd] was found with a last modified time that did not match the associated WAR. It will be deleted.
+28-Apr-2023 22:58:27.458 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Apr-2023 22:58:27.751 WARNING [main] org.glassfish.jersey.server.wadl.WadlFeature.configure JAXBContext implementation could not be found. WADL feature is disabled.
+28-Apr-2023 22:58:27.919 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/ssdd.war] has finished in [1,047] ms
+28-Apr-2023 22:58:27.920 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/docs]
+28-Apr-2023 22:58:27.937 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/docs] has finished in [17] ms
+28-Apr-2023 22:58:27.937 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/host-manager]
+28-Apr-2023 22:58:27.958 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/host-manager] has finished in [21] ms
+28-Apr-2023 22:58:27.958 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/examples]
+28-Apr-2023 22:58:28.074 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/examples] has finished in [115] ms
+28-Apr-2023 22:58:28.074 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/manager]
+28-Apr-2023 22:58:28.089 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/manager] has finished in [15] ms
+28-Apr-2023 22:58:28.089 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/ROOT]
+28-Apr-2023 22:58:28.101 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_2/webapps/ROOT] has finished in [12] ms
+28-Apr-2023 22:58:28.104 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8081"]
+28-Apr-2023 22:58:28.113 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1298] milliseconds
+28-Apr-2023 22:58:50.550 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Apr-2023 22:58:50.551 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8081"]
+28-Apr-2023 22:58:50.552 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Apr-2023 22:58:50.557 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [Jersey REST Service]
+28-Apr-2023 22:58:51.558 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [Jersey REST Service]
+28-Apr-2023 22:58:52.568 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8081"]
+28-Apr-2023 22:58:52.577 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8081"]

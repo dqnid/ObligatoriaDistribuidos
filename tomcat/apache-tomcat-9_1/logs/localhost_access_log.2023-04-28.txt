@@ -1,2 +1,3 @@
 127.0.0.1 - - [28/Apr/2023:10:07:46 +0200] "GET /ssdd/node/start?ipList=localhost%3A8081%2Clocalhost%3A8082%2Clocalhost%3A8083%2Clocalhost%3A8084%2Clocalhost%3A8085&id=0&myIp=localhost%3A8080&logFolder=.log%2F HTTP/1.1" 500 10672
 127.0.0.1 - - [28/Apr/2023:10:59:36 +0200] "GET /ssdd/node/start?ipList=localhost%3A8081%2Clocalhost%3A8082%2Clocalhost%3A8083%2Clocalhost%3A8084%2Clocalhost%3A8085&id=0&myIp=localhost%3A8080&logFolder=.log%2F HTTP/1.1" 500 10672
+127.0.0.1 - - [28/Apr/2023:22:58:28 +0200] "GET /ssdd/node/start?ipList=localhost%3A8081%2Clocalhost%3A8082%2Clocalhost%3A8083%2Clocalhost%3A8084%2Clocalhost%3A8085&id=0&myIp=localhost%3A8080&logFolder=..%2Flog%2F HTTP/1.1" 500 10434

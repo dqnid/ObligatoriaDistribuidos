@@ -381,3 +381,194 @@
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.base/java.lang.Thread.run(Thread.java:829)
 28-Apr-2023 10:59:48.249 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+28-Apr-2023 22:58:26.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.73
+28-Apr-2023 22:58:26.459 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 27 2023 15:33:40 UTC
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.73.0
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.2.7-arch1-1
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.6+10
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+28-Apr-2023 22:58:26.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+28-Apr-2023 22:58:26.471 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/conf/logging.properties
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+28-Apr-2023 22:58:26.472 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/temp
+28-Apr-2023 22:58:26.474 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/local/lib64::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+28-Apr-2023 22:58:26.763 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+28-Apr-2023 22:58:26.803 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [476] milliseconds
+28-Apr-2023 22:58:26.853 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+28-Apr-2023 22:58:26.855 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+28-Apr-2023 22:58:26.870 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war]
+28-Apr-2023 22:58:26.895 INFO [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd] was found with a last modified time that did not match the associated WAR. It will be deleted.
+28-Apr-2023 22:58:27.430 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+28-Apr-2023 22:58:27.753 WARNING [main] org.glassfish.jersey.server.wadl.WadlFeature.configure JAXBContext implementation could not be found. WADL feature is disabled.
+28-Apr-2023 22:58:27.913 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] has finished in [1,043] ms
+28-Apr-2023 22:58:27.914 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs]
+28-Apr-2023 22:58:27.934 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] has finished in [20] ms
+28-Apr-2023 22:58:27.935 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager]
+28-Apr-2023 22:58:27.960 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] has finished in [25] ms
+28-Apr-2023 22:58:27.960 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples]
+28-Apr-2023 22:58:28.081 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] has finished in [121] ms
+28-Apr-2023 22:58:28.081 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager]
+28-Apr-2023 22:58:28.096 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] has finished in [15] ms
+28-Apr-2023 22:58:28.096 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT]
+28-Apr-2023 22:58:28.108 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] has finished in [12] ms
+28-Apr-2023 22:58:28.111 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+28-Apr-2023 22:58:28.120 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1316] milliseconds
+28-Apr-2023 22:58:50.371 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+28-Apr-2023 22:58:50.372 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+28-Apr-2023 22:58:50.373 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+28-Apr-2023 22:58:50.386 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [Jersey REST Service]
+28-Apr-2023 22:58:51.387 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [Jersey REST Service]
+28-Apr-2023 22:58:52.388 INFO [main] org.apache.catalina.core.StandardWrapper.unload Waiting for [1] instance(s) to be deallocated for Servlet [Jersey REST Service]
+28-Apr-2023 22:58:52.497 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ssdd] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ java.base@17.0.6/java.lang.Object.wait(Native Method)
+ java.base@17.0.6/java.lang.Object.wait(Object.java:338)
+ ssdd.Node.join(Node.java:56)
+ java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ java.base@17.0.6/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+ java.base@17.0.6/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@17.0.6/java.lang.reflect.Method.invoke(Method.java:568)
+ org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+ org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$$Lambda$290/0x0000000800302b48.invoke(Unknown Source)
+ org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:134)
+ org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:177)
+ org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+ org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:81)
+ org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+ org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+ org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+ org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+ org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+ org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+ org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+ org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+ org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+ org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+ org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+ org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:358)
+ org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:311)
+ org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+ org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+ org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+ org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+ org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+ org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+ org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)]
+28-Apr-2023 22:58:52.498 SEVERE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ssdd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@340b4f07]) and a value of type [org.glassfish.jersey.internal.Errors] (value [org.glassfish.jersey.internal.Errors@e994ca]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Apr-2023 22:58:52.505 SEVERE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [ssdd] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@5a205ee5]) and a value of type [org.glassfish.jersey.inject.hk2.Hk2RequestScope.Instance] (value [Instance{id=2150bf21-cee9-474c-a99b-87f2e039bb02, referenceCounter=2, store size=3}]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+28-Apr-2023 22:58:52.513 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+28-Apr-2023 22:58:52.519 INFO [http-nio-8080-exec-2] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load [java.util.concurrent.CompletionStage]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [java.util.concurrent.CompletionStage]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1432)
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1420)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1259)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1220)
+		at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:137)
+		at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:177)
+		at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+		at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:81)
+		at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+		at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+		at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+		at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+		at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+		at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+		at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+		at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+		at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+		at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+		at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+		at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+		at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+		at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:358)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:311)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Apr-2023 22:58:52.520 INFO [http-nio-8080-exec-2] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load [org.glassfish.jersey.servlet.WebComponent$4]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load [org.glassfish.jersey.servlet.WebComponent$4]. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1432)
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForClassLoading(WebappClassLoaderBase.java:1420)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1259)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1220)
+		at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:347)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:358)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:311)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+28-Apr-2023 22:58:52.524 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

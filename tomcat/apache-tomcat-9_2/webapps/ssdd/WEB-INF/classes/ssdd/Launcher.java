@@ -46,8 +46,9 @@ public class Launcher extends Thread{
 		String logFolder;
 
 		if (args.length != 2) {
-			System.out.println("Lanzamiento incorrecto\njava -jar ssdd.jar cfgfile logFolder");
-			System.exit(-1);
+			System.out.println("Asumiendo ubicación del fichero de cfg y la carpeta de logs");
+			cfgFile = "/home/danih/.config/ssdd";
+			logFolder = "/home/danih/.config/ssdd/ssdd.cfg";
 		}
 		cfgFile = args[0];
 		logFolder = args[1];
