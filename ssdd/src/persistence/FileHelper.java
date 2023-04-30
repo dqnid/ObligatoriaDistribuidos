@@ -144,7 +144,7 @@ public class FileHelper {
 			}
 			while (file_reader.hasNextLine()) {
                 String line = file_reader.nextLine();
-                log+=line;
+                log+=line + ";";
 			}
 			file_reader.close();
 			return log;
