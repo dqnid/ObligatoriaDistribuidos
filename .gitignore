@@ -1,1 +1,4 @@
+log/*
+tomcat/apache-tomcat-9_*/log/*
+tomcat/apache-tomcat-9_*/webapps/ssdd/
 !.gitignore
