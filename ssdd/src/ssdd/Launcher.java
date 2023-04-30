@@ -43,7 +43,7 @@ public class Launcher extends Thread{
 		System.out.println("Server: " + this.mi_ip + " NTP: "+this.ntpServer);
 		
 		String respuesta = target.path("node").path("start").queryParam("ipList", ip_list_nodos).queryParam("id", mi_id).queryParam("logFolder", this.logFolder).queryParam("ntpServer", this.ntpServer).request(MediaType.TEXT_PLAIN).get(String.class);
-		FileHelper.logFromString(this.logFolder, respuesta);
+		FileHelper.logFromString(this.logFolder + "/" + this.mi_id + "_FinalAdjusted.log", respuesta);
 		System.out.println("Finalizado");
 	}
 	

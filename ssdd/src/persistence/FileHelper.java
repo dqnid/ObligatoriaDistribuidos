@@ -153,9 +153,9 @@ public class FileHelper {
 		}
 	}
 	
-	public static int logFromString(String route_to_log_folder, String logContent) {
+	public static int logFromString(String route_to_log_file, String logContent) {
    	 	String newline = System.getProperty("line.separator");
-   	 	String output_route = route_to_log_folder + "_adjusted.log";
+   	 	String output_route = route_to_log_file;
    	 	String[] logContent_by_line = logContent.split(";");
 	    try {
 			File file = new File(output_route);
