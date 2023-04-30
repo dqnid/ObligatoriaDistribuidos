@@ -124,7 +124,9 @@ public class Node {
 
 		FileHelper.adjustLog(""+logFolder+"/"+this.p+".log", this.ntp_values[1]);
 		
-		return "Finished with NTP offset= " + this.ntp_values[0] + " and delay= " + this.ntp_values[1];
+		String log = FileHelper.getLog(""+logFolder+"/"+this.p+".log" + "_adjusted.log");
+		
+		return log;
 	}
 	
 	private Boolean selfHasOlderEntrance(int ti, int pi, int tj, int pj) {

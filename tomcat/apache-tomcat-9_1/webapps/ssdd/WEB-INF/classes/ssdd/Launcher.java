@@ -40,10 +40,11 @@ public class Launcher extends Thread{
 		URI uri=UriBuilder.fromUri("http://"+ mi_ip + "/ssdd/").build();
 		WebTarget target = client.target(uri);
 		
-		System.out.println("Server: " + this.mi_ip + "NTP: "+this.ntpServer);
+		System.out.println("Server: " + this.mi_ip + " NTP: "+this.ntpServer);
 		
 		String respuesta = target.path("node").path("start").queryParam("ipList", ip_list_nodos).queryParam("id", mi_id).queryParam("logFolder", this.logFolder).queryParam("ntpServer", this.ntpServer).request(MediaType.TEXT_PLAIN).get(String.class);
-		System.out.println(respuesta);
+		FileHelper.logFromString(this.logFolder, respuesta);
+		System.out.println("Finalizado");
 	}
 	
 	public static void main(String[] args) {

@@ -40,8 +40,8 @@ public class FileHelper {
 	public static int adjustLog(String route_to_file, long delay){
 		File file = new File(route_to_file);
 	
-		String output_route_to_file = "" + route_to_file.split(".l")[0] + "_adjusted.log";
-		
+		String output_route_to_file = route_to_file + "_adjusted.log";
+
 		File file_output = new File(output_route_to_file);
    		
    	 	String newline = System.getProperty("line.separator");
@@ -94,6 +94,7 @@ public class FileHelper {
                 if (line.startsWith("ntp") || line.startsWith("#")) {
                 	continue;
                 }
+                //ipList.add(line + ";");
                 ipList.add(line);
 			}
 			file_reader.close();
@@ -128,6 +129,55 @@ public class FileHelper {
 		}else {
 			return null;
 		}
+	}
+	
+	public static String getLog(String route_to_file){
+		String log = "";
+		File file = new File(route_to_file);
+		if (file.exists()) {
+			Scanner file_reader;
+			try {
+				file_reader = new Scanner(file);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+				return null;
+			}
+			while (file_reader.hasNextLine()) {
+                String line = file_reader.nextLine();
+                log+=line;
+			}
+			file_reader.close();
+			return log;
+		}else {
+			return null;
+		}
+	}
+	
+	public static int logFromString(String route_to_log_folder, String logContent) {
+   	 	String newline = System.getProperty("line.separator");
+   	 	String output_route = route_to_log_folder + "_adjusted.log";
+   	 	String[] logContent_by_line = logContent.split(";");
+	    try {
+			File file = new File(output_route);
+	        file.createNewFile();
+	        try {
+	        	FileWriter myWriter = new FileWriter(output_route,true);
+	        	for (String str : logContent_by_line) {
+		        	myWriter.append(str);
+		        	myWriter.append(newline);	
+	        	}
+	        	myWriter.close();
+	        } catch (IOException e) {
+	        	System.out.println("Error en la escritura del log final.");
+	        	e.printStackTrace();
+	        	return -1;
+	        }
+	      } catch (IOException e) {
+	        System.out.println("Error en la apertura del log final.");
+	        e.printStackTrace();
+	        return -1;
+	      }
+		return 0;
 	}
 	
 	public static String getNTPServer(String route_to_file){

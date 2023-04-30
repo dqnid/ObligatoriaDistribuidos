@@ -1,12 +1,11 @@
 #!/bin/bash
 
-./bin/stop.sh
+mkdir ./log/old/$now
+mv ./log/*.log ./log/old/$now/
 for dir in ./tomcat/*/
 do
 	chmod +x $dir/bin/*
 	now="$(date +%H%M%S)"
-	mkdir ./log/old/$now
-	mv ./log/*.log ./log/old/$now/
 	rm -rf $dir/ssdd/
 	cp ./bin/ssdd.war $dir/webapps/ssdd.war
 
