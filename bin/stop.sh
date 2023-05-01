@@ -5,3 +5,4 @@ do
 	chmod +x $dir/bin/*
 	$dir/bin/shutdown.sh
 done
+
