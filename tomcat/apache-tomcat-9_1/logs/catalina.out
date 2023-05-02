@@ -9868,3 +9868,914 @@ Soy 0 y entro en la zona
 02-May-2023 00:29:02.802 INFORMACIÓN [Thread-1] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
 02-May-2023 00:29:02.835 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
 02-May-2023 00:29:02.848 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:14:45.040 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.73
+02-May-2023 15:14:45.044 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Feb 27 2023 15:33:40 UTC
+02-May-2023 15:14:45.044 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.73.0
+02-May-2023 15:14:45.044 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Linux
+02-May-2023 15:14:45.044 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      6.2.1-arch1-1
+02-May-2023 15:14:45.044 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+02-May-2023 15:14:45.044 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /usr/lib/jvm/java-11-openjdk
+02-May-2023 15:14:45.044 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       11.0.18+10
+02-May-2023 15:14:45.044 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+02-May-2023 15:14:45.045 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:14:45.045 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:14:45.065 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 15:14:45.066 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 15:14:45.066 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 15:14:45.066 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 15:14:45.066 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:14:45.066 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/conf/logging.properties
+02-May-2023 15:14:45.066 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 15:14:45.066 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 15:14:45.067 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 15:14:45.067 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 15:14:45.067 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+02-May-2023 15:14:45.067 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:14:45.067 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:14:45.067 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/temp
+02-May-2023 15:14:45.069 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/usr/local/lib64::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+02-May-2023 15:14:45.483 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+02-May-2023 15:14:45.525 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [769] milliseconds
+02-May-2023 15:14:45.635 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+02-May-2023 15:14:45.636 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+02-May-2023 15:14:45.661 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Despliegue del archivo [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] de la aplicación web
+02-May-2023 15:14:45.690 INFORMACIÓN [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd] was found with a last modified time that did not match the associated WAR. It will be deleted.
+02-May-2023 15:14:46.720 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+02-May-2023 15:14:47.278 ADVERTENCIA [main] org.glassfish.jersey.server.wadl.WadlFeature.configure JAXBContext implementation could not be found. WADL feature is disabled.
+02-May-2023 15:14:47.522 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] has finished in [1.862] ms
+02-May-2023 15:14:47.523 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] de la aplicación web
+02-May-2023 15:14:47.699 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] has finished in [176] ms
+02-May-2023 15:14:47.699 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] de la aplicación web
+02-May-2023 15:14:47.731 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] has finished in [32] ms
+02-May-2023 15:14:47.731 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] de la aplicación web
+02-May-2023 15:14:47.754 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] has finished in [23] ms
+02-May-2023 15:14:47.754 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] de la aplicación web
+02-May-2023 15:14:47.775 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] has finished in [21] ms
+02-May-2023 15:14:47.775 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] de la aplicación web
+02-May-2023 15:14:47.798 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] has finished in [22] ms
+02-May-2023 15:14:47.804 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:14:47.820 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [2294] milliseconds
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+02-May-2023 15:17:01.313 GRAVE [http-nio-8080-exec-7] org.glassfish.jersey.server.ServerRuntime$Responder.writeResponse An I/O error has occurred while writing a response message entity to the container output stream.
+	org.glassfish.jersey.server.internal.process.MappableException: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Tubería rota
+		at org.glassfish.jersey.server.internal.MappableExceptionWrapperInterceptor.aroundWriteTo(MappableExceptionWrapperInterceptor.java:67)
+		at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+		at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1116)
+		at org.glassfish.jersey.server.ServerRuntime$Responder.writeResponse(ServerRuntime.java:649)
+		at org.glassfish.jersey.server.ServerRuntime$Responder.processResponse(ServerRuntime.java:380)
+		at org.glassfish.jersey.server.ServerRuntime$Responder.process(ServerRuntime.java:370)
+		at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:259)
+		at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+		at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+		at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+		at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+		at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+		at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+		at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+		at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+		at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+		at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:358)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:311)
+		at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:829)
+	Caused by: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Tubería rota
+		at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:309)
+		at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:271)
+		at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+		at org.glassfish.jersey.servlet.internal.ResponseWriter$NonCloseableOutputStreamWrapper.flush(ResponseWriter.java:307)
+		at org.glassfish.jersey.message.internal.CommittingOutputStream.flush(CommittingOutputStream.java:263)
+		at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$UnCloseableOutputStream.flush(WriterInterceptorExecutor.java:281)
+		at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:318)
+		at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:153)
+		at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:251)
+		at org.glassfish.jersey.message.internal.ReaderWriter.writeToAsString(ReaderWriter.java:239)
+		at org.glassfish.jersey.message.internal.AbstractMessageReaderWriterProvider.writeToAsString(AbstractMessageReaderWriterProvider.java:107)
+		at org.glassfish.jersey.message.internal.StringMessageProvider.writeTo(StringMessageProvider.java:76)
+		at org.glassfish.jersey.message.internal.StringMessageProvider.writeTo(StringMessageProvider.java:36)
+		at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.invokeWriteTo(WriterInterceptorExecutor.java:242)
+		at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:227)
+		at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+		at org.glassfish.jersey.server.internal.JsonWithPaddingInterceptor.aroundWriteTo(JsonWithPaddingInterceptor.java:85)
+		at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+		at org.glassfish.jersey.server.internal.MappableExceptionWrapperInterceptor.aroundWriteTo(MappableExceptionWrapperInterceptor.java:61)
+		... 41 more
+	Caused by: java.io.IOException: Tubería rota
+		at java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+		at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+		at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:113)
+		at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:79)
+		at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:50)
+		at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:462)
+		at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:136)
+		at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1431)
+		at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:768)
+		at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:732)
+		at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:716)
+		at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:566)
+		at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+		at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:220)
+		at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1244)
+		at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:397)
+		at org.apache.coyote.Response.action(Response.java:207)
+		at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:305)
+		... 59 more
+02-May-2023 15:17:17.655 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+02-May-2023 15:17:17.656 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:17:17.658 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+02-May-2023 15:17:17.687 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:17:17.693 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:17:18.319 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.73
+02-May-2023 15:17:18.324 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Feb 27 2023 15:33:40 UTC
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.73.0
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Linux
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      6.2.1-arch1-1
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /usr/lib/jvm/java-11-openjdk
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       11.0.18+10
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:17:18.325 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:17:18.342 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 15:17:18.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 15:17:18.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 15:17:18.343 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 15:17:18.344 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:17:18.344 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/conf/logging.properties
+02-May-2023 15:17:18.344 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 15:17:18.346 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 15:17:18.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 15:17:18.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 15:17:18.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+02-May-2023 15:17:18.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:17:18.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:17:18.347 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/temp
+02-May-2023 15:17:18.349 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/usr/local/lib64::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+02-May-2023 15:17:18.815 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+02-May-2023 15:17:18.874 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [869] milliseconds
+02-May-2023 15:17:19.011 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+02-May-2023 15:17:19.012 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+02-May-2023 15:17:19.048 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Despliegue del archivo [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] de la aplicación web
+02-May-2023 15:17:19.085 INFORMACIÓN [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd] was found with a last modified time that did not match the associated WAR. It will be deleted.
+02-May-2023 15:17:20.132 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+02-May-2023 15:17:20.635 ADVERTENCIA [main] org.glassfish.jersey.server.wadl.WadlFeature.configure JAXBContext implementation could not be found. WADL feature is disabled.
+02-May-2023 15:17:20.865 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] has finished in [1.817] ms
+02-May-2023 15:17:20.865 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] de la aplicación web
+02-May-2023 15:17:21.021 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] has finished in [156] ms
+02-May-2023 15:17:21.021 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] de la aplicación web
+02-May-2023 15:17:21.046 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] has finished in [25] ms
+02-May-2023 15:17:21.047 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] de la aplicación web
+02-May-2023 15:17:21.065 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] has finished in [17] ms
+02-May-2023 15:17:21.065 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] de la aplicación web
+02-May-2023 15:17:21.087 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] has finished in [21] ms
+02-May-2023 15:17:21.087 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] de la aplicación web
+02-May-2023 15:17:21.103 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] has finished in [16] ms
+02-May-2023 15:17:21.109 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:17:21.123 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [2248] milliseconds
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+02-May-2023 15:19:00.984 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+02-May-2023 15:19:00.985 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:19:00.986 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+02-May-2023 15:19:01.020 INFORMACIÓN [main] org.apache.catalina.core.StandardWrapper.unload Esperando por [1] instancia(s) para recuperar su espacio reservado
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:19:01.531 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.73
+02-May-2023 15:19:01.535 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Feb 27 2023 15:33:40 UTC
+02-May-2023 15:19:01.535 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.73.0
+02-May-2023 15:19:01.535 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Linux
+02-May-2023 15:19:01.535 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      6.2.1-arch1-1
+02-May-2023 15:19:01.535 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+02-May-2023 15:19:01.535 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /usr/lib/jvm/java-11-openjdk
+02-May-2023 15:19:01.536 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       11.0.18+10
+02-May-2023 15:19:01.536 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+02-May-2023 15:19:01.536 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:19:01.536 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:19:01.549 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 15:19:01.550 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 15:19:01.550 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 15:19:01.550 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 15:19:01.550 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:19:01.550 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/conf/logging.properties
+02-May-2023 15:19:01.550 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 15:19:01.550 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 15:19:01.551 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 15:19:01.551 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 15:19:01.551 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+02-May-2023 15:19:01.551 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:19:01.551 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:19:01.551 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/temp
+02-May-2023 15:19:01.553 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/usr/local/lib64::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+02-May-2023 15:19:01.921 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+02-May-2023 15:19:01.946 GRAVE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Fallo al iniciar el componente [Connector[HTTP/1.1-8080]]
+	org.apache.catalina.LifecycleException: Falló la inicialización del manejador de protocolo
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1014)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:549)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1032)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:724)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:746)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:307)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:477)
+	Caused by: java.net.BindException: La dirección ya se está usando
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:459)
+		at java.base/sun.nio.ch.Net.bind(Net.java:448)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:276)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:231)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1302)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1315)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:652)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:75)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1012)
+		... 13 more
+02-May-2023 15:19:01.949 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [676] milliseconds
+02-May-2023 15:19:02.022 INFORMACIÓN [main] org.apache.catalina.core.StandardWrapper.unload Esperando por [1] instancia(s) para recuperar su espacio reservado
+02-May-2023 15:19:02.046 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+02-May-2023 15:19:02.046 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+02-May-2023 15:19:02.072 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Despliegue del archivo [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] de la aplicación web
+02-May-2023 15:19:02.104 INFORMACIÓN [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd] was found with a last modified time that did not match the associated WAR. It will be deleted.
+02-May-2023 15:19:03.023 INFORMACIÓN [main] org.apache.catalina.core.StandardWrapper.unload Esperando por [1] instancia(s) para recuperar su espacio reservado
+02-May-2023 15:19:03.129 ADVERTENCIA [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [ssdd] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:[
+ java.base@11.0.18/java.net.SocketInputStream.socketRead0(Native Method)
+ java.base@11.0.18/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+ java.base@11.0.18/java.net.SocketInputStream.read(SocketInputStream.java:168)
+ java.base@11.0.18/java.net.SocketInputStream.read(SocketInputStream.java:140)
+ java.base@11.0.18/java.io.BufferedInputStream.fill(BufferedInputStream.java:252)
+ java.base@11.0.18/java.io.BufferedInputStream.read1(BufferedInputStream.java:292)
+ java.base@11.0.18/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+ java.base@11.0.18/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:787)
+ java.base@11.0.18/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:722)
+ java.base@11.0.18/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1615)
+ java.base@11.0.18/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+ java.base@11.0.18/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+ org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:380)
+ org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:268)
+ org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:300)
+ org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$1(JerseyInvocation.java:675)
+ org.glassfish.jersey.client.JerseyInvocation$$Lambda$335/0x000000080039e440.call(Unknown Source)
+ org.glassfish.jersey.client.JerseyInvocation.call(JerseyInvocation.java:697)
+ org.glassfish.jersey.client.JerseyInvocation.lambda$runInScope$3(JerseyInvocation.java:691)
+ org.glassfish.jersey.client.JerseyInvocation$$Lambda$336/0x000000080039d840.call(Unknown Source)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+ org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+ org.glassfish.jersey.client.JerseyInvocation.runInScope(JerseyInvocation.java:691)
+ org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:674)
+ org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:422)
+ org.glassfish.jersey.client.JerseyInvocation$Builder.get(JerseyInvocation.java:318)
+ util.ClientHelper.run(ClientHelper.java:40)
+ util.ClientHelper.requestEntry(ClientHelper.java:57)
+ ssdd.Node.start(Node.java:87)
+ java.base@11.0.18/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+ java.base@11.0.18/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+ java.base@11.0.18/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+ java.base@11.0.18/java.lang.reflect.Method.invoke(Method.java:566)
+ org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory.lambda$static$0(ResourceMethodInvocationHandlerFactory.java:52)
+ org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$$Lambda$273/0x000000080032fc40.invoke(Unknown Source)
+ org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:134)
+ org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:177)
+ org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$TypeOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:219)
+ org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:81)
+ org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:478)
+ org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:400)
+ org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:81)
+ org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:256)
+ org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+ org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+ org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+ org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+ org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:235)
+ org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:684)
+ org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+ org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+ org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:358)
+ org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:311)
+ org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:673)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+ org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+ org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+ org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+ org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+ org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+ org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.base@11.0.18/java.lang.Thread.run(Thread.java:829)]
+02-May-2023 15:19:03.131 GRAVE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks La aplicación web [ssdd] creó un ThreadLocal con clave del tipo [java.lang.ThreadLocal] (valor [java.lang.ThreadLocal@26495639]) y un valor del tipo [org.glassfish.jersey.inject.hk2.Hk2RequestScope.Instance] (valor [Instance{id=91fe3517-0d91-440c-924e-2e2a399c860e, referenceCounter=2, store size=3}]) pero no pudo quitarlo cuando la aplicación web se paró. Los hilos se van a renovar con el tiempo para intentar evitar in posible fallo de memoria.
+02-May-2023 15:19:03.132 GRAVE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks La aplicación web [ssdd] creó un ThreadLocal con clave del tipo [java.lang.ThreadLocal] (valor [java.lang.ThreadLocal@543da15]) y un valor del tipo [org.glassfish.jersey.internal.Errors] (valor [org.glassfish.jersey.internal.Errors@69d7bc1a]) pero no pudo quitarlo cuando la aplicación web se paró. Los hilos se van a renovar con el tiempo para intentar evitar in posible fallo de memoria.
+02-May-2023 15:19:03.133 GRAVE [main] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks La aplicación web [ssdd] creó un ThreadLocal con clave del tipo [java.lang.ThreadLocal] (valor [java.lang.ThreadLocal@cb318ac]) y un valor del tipo [org.glassfish.jersey.inject.hk2.Hk2RequestScope.Instance] (valor [Instance{id=db063508-c0e5-4f67-bc93-9186453d7097, referenceCounter=1, store size=1}]) pero no pudo quitarlo cuando la aplicación web se paró. Los hilos se van a renovar con el tiempo para intentar evitar in posible fallo de memoria.
+02-May-2023 15:19:03.155 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:19:03.165 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+02-May-2023 15:19:03.793 ADVERTENCIA [main] org.glassfish.jersey.server.wadl.WadlFeature.configure JAXBContext implementation could not be found. WADL feature is disabled.
+02-May-2023 15:19:04.122 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] has finished in [2.051] ms
+02-May-2023 15:19:04.123 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] de la aplicación web
+02-May-2023 15:19:04.311 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] has finished in [188] ms
+02-May-2023 15:19:04.311 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] de la aplicación web
+02-May-2023 15:19:04.339 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] has finished in [28] ms
+02-May-2023 15:19:04.340 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] de la aplicación web
+02-May-2023 15:19:04.358 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] has finished in [18] ms
+02-May-2023 15:19:04.359 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] de la aplicación web
+02-May-2023 15:19:04.381 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] has finished in [23] ms
+02-May-2023 15:19:04.381 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] de la aplicación web
+02-May-2023 15:19:04.397 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] has finished in [16] ms
+02-May-2023 15:19:04.404 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [2454] milliseconds
+02-May-2023 15:19:08.168 ADVERTENCIA [main] org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor El ejecutor asociado con el hilo del pool [http-nio-8080] no fue totalmente apagado. Algunos hilos de la aplicación pudieran estar corriendo aún.
+02-May-2023 15:19:08.171 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:22:05.970 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+02-May-2023 15:22:05.971 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:22:05.971 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+02-May-2023 15:22:05.997 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:22:06.000 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:22:10.510 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.73
+02-May-2023 15:22:10.515 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Feb 27 2023 15:33:40 UTC
+02-May-2023 15:22:10.515 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.73.0
+02-May-2023 15:22:10.515 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Linux
+02-May-2023 15:22:10.515 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      6.2.1-arch1-1
+02-May-2023 15:22:10.515 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+02-May-2023 15:22:10.515 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /usr/lib/jvm/java-11-openjdk
+02-May-2023 15:22:10.515 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       11.0.18+10
+02-May-2023 15:22:10.515 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+02-May-2023 15:22:10.516 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:22:10.516 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:22:10.530 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 15:22:10.531 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 15:22:10.531 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 15:22:10.531 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/conf/logging.properties
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:22:10.532 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:22:10.533 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/temp
+02-May-2023 15:22:10.534 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/usr/local/lib64::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+02-May-2023 15:22:10.911 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+02-May-2023 15:22:10.941 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [693] milliseconds
+02-May-2023 15:22:11.026 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+02-May-2023 15:22:11.026 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+02-May-2023 15:22:11.047 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Despliegue del archivo [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] de la aplicación web
+02-May-2023 15:22:11.072 INFORMACIÓN [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd] was found with a last modified time that did not match the associated WAR. It will be deleted.
+02-May-2023 15:22:12.077 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+02-May-2023 15:22:12.600 ADVERTENCIA [main] org.glassfish.jersey.server.wadl.WadlFeature.configure JAXBContext implementation could not be found. WADL feature is disabled.
+02-May-2023 15:22:12.865 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] has finished in [1.818] ms
+02-May-2023 15:22:12.866 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] de la aplicación web
+02-May-2023 15:22:13.050 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] has finished in [184] ms
+02-May-2023 15:22:13.051 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] de la aplicación web
+02-May-2023 15:22:13.082 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] has finished in [30] ms
+02-May-2023 15:22:13.082 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] de la aplicación web
+02-May-2023 15:22:13.104 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] has finished in [21] ms
+02-May-2023 15:22:13.104 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] de la aplicación web
+02-May-2023 15:22:13.128 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] has finished in [24] ms
+02-May-2023 15:22:13.129 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] de la aplicación web
+02-May-2023 15:22:13.150 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] has finished in [21] ms
+02-May-2023 15:22:13.157 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:22:13.172 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [2230] milliseconds
+02-May-2023 15:22:37.837 INFORMACIÓN [main] org.apache.catalina.core.StandardServer.await Se ha recibido un comando de apagado a través del puerto de apagado. Parando la instancia del Servidor.
+02-May-2023 15:22:37.838 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:22:37.841 INFORMACIÓN [main] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+02-May-2023 15:22:37.876 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:22:37.888 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:22:38.468 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Nombre de la versión del servidor: Apache Tomcat/9.0.73
+02-May-2023 15:22:38.473 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:                      Feb 27 2023 15:33:40 UTC
+02-May-2023 15:22:38.474 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Número de versión de servidor:     9.0.73.0
+02-May-2023 15:22:38.474 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:                           Linux
+02-May-2023 15:22:38.474 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Versión de Systema Operativo:      6.2.1-arch1-1
+02-May-2023 15:22:38.474 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Arquitectura:                      amd64
+02-May-2023 15:22:38.474 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                         /usr/lib/jvm/java-11-openjdk
+02-May-2023 15:22:38.474 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:                       11.0.18+10
+02-May-2023 15:22:38.474 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Vededor JVM:                       Oracle Corporation
+02-May-2023 15:22:38.474 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:22:38.475 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:                     /home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:22:38.492 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.lang=ALL-UNNAMED
+02-May-2023 15:22:38.493 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.io=ALL-UNNAMED
+02-May-2023 15:22:38.493 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util=ALL-UNNAMED
+02-May-2023 15:22:38.493 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+02-May-2023 15:22:38.493 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+02-May-2023 15:22:38.493 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.config.file=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/conf/logging.properties
+02-May-2023 15:22:38.494 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-May-2023 15:22:38.494 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djdk.tls.ephemeralDHKeySize=2048
+02-May-2023 15:22:38.494 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+02-May-2023 15:22:38.494 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+02-May-2023 15:22:38.495 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dignore.endorsed.dirs=
+02-May-2023 15:22:38.495 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.base=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:22:38.495 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Dcatalina.home=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1
+02-May-2023 15:22:38.495 INFORMACIÓN [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument:             -Djava.io.tmpdir=/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/temp
+02-May-2023 15:22:38.497 INFORMACIÓN [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La biblioteca nativa de Apache Tomcat basada en ARP que permite un rendimiento óptimo en entornos de desarrollo no ha sido hallada en java.library.path: [/usr/local/lib64::/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib]
+02-May-2023 15:22:38.948 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.init Inicializando el manejador de protocolo ["http-nio-8080"]
+
+02-May-2023 15:22:38.985 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.load Server initialization in [812] milliseconds
+02-May-2023 15:22:39.094 INFORMACIÓN [main] org.apache.catalina.core.StandardService.startInternal Arrancando servicio [Catalina]
+02-May-2023 15:22:39.094 INFORMACIÓN [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.73]
+02-May-2023 15:22:39.121 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Despliegue del archivo [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] de la aplicación web
+02-May-2023 15:22:39.152 INFORMACIÓN [main] org.apache.catalina.startup.ExpandWar.expand An expanded directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd] was found with a last modified time that did not match the associated WAR. It will be deleted.
+02-May-2023 15:22:40.323 INFORMACIÓN [main] org.apache.jasper.servlet.TldScanner.scanJars Al menos un JAR, que se ha explorado buscando TLDs, aún no contenía TLDs. Activar historial de depuración para este historiador para una completa lista de los JARs que fueron explorados y de los que nos se halló TLDs. Saltarse JARs no necesarios durante la exploración puede dar lugar a una mejora de tiempo significativa en el arranque y compilación de JSP .
+02-May-2023 15:22:40.829 ADVERTENCIA [main] org.glassfish.jersey.server.wadl.WadlFeature.configure JAXBContext implementation could not be found. WADL feature is disabled.
+02-May-2023 15:22:41.061 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ssdd.war] has finished in [1.941] ms
+02-May-2023 15:22:41.062 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] de la aplicación web
+02-May-2023 15:22:41.245 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/examples] has finished in [183] ms
+02-May-2023 15:22:41.246 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] de la aplicación web
+02-May-2023 15:22:41.274 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/manager] has finished in [29] ms
+02-May-2023 15:22:41.275 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] de la aplicación web
+02-May-2023 15:22:41.298 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/docs] has finished in [22] ms
+02-May-2023 15:22:41.298 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] de la aplicación web
+02-May-2023 15:22:41.321 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/host-manager] has finished in [23] ms
+02-May-2023 15:22:41.322 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Desplegando el directorio [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] de la aplicación web
+02-May-2023 15:22:41.342 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] has finished in [20] ms
+02-May-2023 15:22:41.348 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+02-May-2023 15:22:41.362 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [2375] milliseconds
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona
+Soy 0 y entro en la zona

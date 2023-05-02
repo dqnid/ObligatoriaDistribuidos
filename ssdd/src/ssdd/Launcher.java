@@ -10,17 +10,18 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.UriBuilder;
 
 import persistence.FileHelper;
+import util.ClientHelper;
 
 public class Launcher extends Thread{
 	String cfgFile;
-	String mi_ip;
+	String nodeIp;
 	String logFolder;
 	String ntpServer;
-	int mi_id;
+	int nodeId;
 	
-	public Launcher(String mi_ip, int mi_id, String cfgFile,String logFolder,String ntpServer) {
-		this.mi_ip = mi_ip;
-		this.mi_id = mi_id;
+	public Launcher(String nodeIp, int nodeId, String cfgFile,String logFolder,String ntpServer) {
+		this.nodeIp = nodeIp;
+		this.nodeId = nodeId;
 		this.logFolder = logFolder;
 		this.cfgFile = cfgFile;
 		this.ntpServer = ntpServer;
@@ -34,16 +35,11 @@ public class Launcher extends Thread{
 		 * - current_ip : ip propia
 		 * - id : identificador
 		 */
-		String ip_list_nodos = FileHelper.getFormatedIPList(cfgFile,mi_ip);
+		String nodeIpList = FileHelper.getFormatedIPList(cfgFile,nodeIp);
 		
-		Client client=ClientBuilder.newClient();
-		URI uri=UriBuilder.fromUri("http://"+ mi_ip + "/ssdd/").build();
-		WebTarget target = client.target(uri);
+		String response = ClientHelper.startProcess(this.nodeIp, nodeIpList, this.nodeId, this.logFolder, this.ntpServer);
 		
-		System.out.println("Server: " + this.mi_ip + " NTP: "+this.ntpServer);
-		
-		String respuesta = target.path("node").path("start").queryParam("ipList", ip_list_nodos).queryParam("id", mi_id).queryParam("logFolder", this.logFolder).queryParam("ntpServer", this.ntpServer).request(MediaType.TEXT_PLAIN).get(String.class);
-		FileHelper.logFromString(""+this.logFolder + "/" + this.mi_id + "_FinalAdjusted.log", respuesta);
+		FileHelper.logFromString(""+this.logFolder + "/" + this.nodeId + "_FinalAdjusted.log", response);
 		System.out.println("Finalizado");
 	}
 	

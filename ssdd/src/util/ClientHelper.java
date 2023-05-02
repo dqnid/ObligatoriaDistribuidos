@@ -43,9 +43,10 @@ public class ClientHelper extends Thread{
 	}
 	
 	/*
-	 * Static methods to keep the code clean
+	 * Static methods
 	 * returns 0 when successful
 	 * returns < 0 when not
+	 * Only request Entry runs on thread
 	 * */
 	public static int requestEntry(String[] target_ip_list, int t, int p)
 	{
@@ -62,5 +63,43 @@ public class ClientHelper extends Thread{
 			e.printStackTrace();
 		}
 		return 0;
+	}
+	
+	public static long[] requestNTP(String ntp_server, int n_evaluations) {
+		Client client=ClientBuilder.newClient();
+		URI uri;
+		WebTarget target;
+		
+		long t0,t1,t2,t3;
+		String[] server_times;
+		long offset, delay;
+		long[] bestPair = {0,0};
+		
+		uri=UriBuilder.fromUri("http://" + ntp_server + "/ssdd/").build();
+		target = client.target(uri);
+		for (int i = 0; i < n_evaluations; i++) {
+			t0 = System.currentTimeMillis();
+			server_times = target.path("node").path("getntp").request(MediaType.TEXT_PLAIN).get(String.class).split(";");
+			t1 = Long.parseLong(server_times[0]);
+			t2 = Long.parseLong(server_times[1]);
+			t3 = System.currentTimeMillis();
+			
+			offset = ((t1-t0+t2-t3)/2);
+			delay = (t1-t0+t3-t2);
+			if (i == 0 || delay < bestPair[1]) {
+				bestPair[0] = offset;
+				bestPair[1] = delay;
+			}
+		}
+		return bestPair;
+	}
+	
+	public static String startProcess(String target_ip, String ip_list_nodes, int id, String logFolder, String ntpServer) {
+		Client client=ClientBuilder.newClient();
+		URI uri=UriBuilder.fromUri("http://"+ target_ip + "/ssdd/").build();
+		WebTarget target = client.target(uri);
+				
+		String respuesta = target.path("node").path("start").queryParam("ipList", ip_list_nodes).queryParam("id", id).queryParam("logFolder", logFolder).queryParam("ntpServer", ntpServer).request(MediaType.TEXT_PLAIN).get(String.class);
+		return respuesta;
 	}
 }

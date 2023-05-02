@@ -14,7 +14,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import ntp.NTPHelper;
 import persistence.FileHelper;
 import util.ClientHelper;
 
@@ -34,13 +33,6 @@ public class Node {
 	private String[] ipList;
 	private long[] ntp_values = {0,0};
 	
-	@Path("prueba")
-	@GET
-	@Produces(MediaType.TEXT_PLAIN)
-	public String prueba(){
-		return "El server arranca"  + System.getProperty("user.dir");
-	}
-	
 	/*
 	 * Service consumed to enter the SC
 	 * */
@@ -49,7 +41,7 @@ public class Node {
 	@Produces(MediaType.TEXT_PLAIN)
 	public String join(@DefaultValue("0") @QueryParam(value="t") int tj, @DefaultValue("0") @QueryParam(value="p") int pj){
 		this.ci = (tj < this.ci ? this.ci : tj) + 1;
-		if (state == TOMADA || state == BUSCADA && this.selfHasOlderEntrance(ti, this.p, tj, pj)) {
+		if (state == TOMADA || state == BUSCADA && (ti < tj || ti == tj && this.p < pj)) {
 			synchronized(this.getClass()) {
 				try {
 					this.getClass().wait();
@@ -78,7 +70,7 @@ public class Node {
 				
 		if (ipList == null || this.p < 0) { return "Fallo"; }
 		
-		ntp_values_pre = NTPHelper.requestNTP(ntpServer, 10);
+		ntp_values_pre = ClientHelper.requestNTP(ntpServer, 10);
 		Random rand = new Random();
 		
 		for (int i = 0; i < 100; i++) 
@@ -118,7 +110,7 @@ public class Node {
 			}
 		}
 
-		ntp_values_post = NTPHelper.requestNTP(ntpServer, 10);
+		ntp_values_post = ClientHelper.requestNTP(ntpServer, 10);
 		this.ntp_values[0] = (ntp_values_pre[0] + ntp_values_post[0]) / 2;
 		this.ntp_values[1] = (ntp_values_pre[1] + ntp_values_post[1]) / 2;
 
@@ -127,10 +119,6 @@ public class Node {
 		String log = FileHelper.getLog(""+logFolder+"/"+this.p+".log" + "_adjusted.log");
 		
 		return log;
-	}
-	
-	private Boolean selfHasOlderEntrance(int ti, int pi, int tj, int pj) {
-		return ti < tj || ti == tj && pi < pj;
 	}
 	
 	@Path("getntp")
