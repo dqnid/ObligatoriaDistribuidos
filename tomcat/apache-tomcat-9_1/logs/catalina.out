@@ -9864,3 +9864,7 @@ Soy 0 y entro en la zona
 Soy 0 y entro en la zona
 Soy 0 y entro en la zona
 Soy 0 y entro en la zona
+02-May-2023 00:29:02.800 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+02-May-2023 00:29:02.802 INFORMACIÓN [Thread-1] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+02-May-2023 00:29:02.835 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+02-May-2023 00:29:02.848 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
