@@ -94,6 +94,17 @@ public class ClientHelper extends Thread{
 		return bestPair;
 	}
 	
+	/*
+	 * El arranque del servidor se hace en hilos (6 en total, 2 por máquina) 
+	 * Al servidor le enviamos:
+	 * @params
+	 * - nodeIpList : lista de ips formateada
+	 * - nodeId : identificador
+	 * - logFolder: directorio de logs propio
+	 * - ntpServer: dirección del servidor ntp (con puerto si es necesario)
+	 * El servidor devuelve:
+	 * @return log : cadena con log ajustado
+	 */
 	public static String startProcess(String target_ip, String ip_list_nodes, int id, String logFolder, String ntpServer) {
 		Client client=ClientBuilder.newClient();
 		URI uri=UriBuilder.fromUri("http://"+ target_ip + "/ssdd/").build();

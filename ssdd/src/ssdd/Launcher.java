@@ -1,13 +1,6 @@
 package ssdd;
 
-import java.net.URI;
 import java.util.ArrayList;
-
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.UriBuilder;
 
 import persistence.FileHelper;
 import util.ClientHelper;
@@ -27,22 +20,35 @@ public class Launcher extends Thread{
 		this.ntpServer = ntpServer;
 	}
 	
+	/*
+	 * El arranque del servidor se hace en hilos (6 en total, 2 por máquina) 
+	 * Dependencias (acoplamiento):
+	 * - FileHelper para obtener el listado de IPs y escribir el log ajustado que ha devuelto el servidor
+	 * - ClientHelper para lanzar la petición GET al servidor.
+	 */
 	public void run() {
-		/*
-		 * Antes de contactar con el servidor (GET) separamos el identificador
-		 * Al servidor le enviamos
-		 * - ip_list_nodos : lista de ips formateada
-		 * - current_ip : ip propia
-		 * - id : identificador
-		 */
 		String nodeIpList = FileHelper.getFormatedIPList(cfgFile,nodeIp);
-		
-		String response = ClientHelper.startProcess(this.nodeIp, nodeIpList, this.nodeId, this.logFolder, this.ntpServer);
-		
-		FileHelper.logFromString(""+this.logFolder + "/" + this.nodeId + "_FinalAdjusted.log", response);
-		System.out.println("Finalizado");
+		if (nodeIpList == null) {
+			System.out.println("Error: durante la obtención de la lista de IPs.");
+			System.out.println("Nodo "+ this.nodeId +" finalizado con errores");
+		} else {
+			System.out.println("Llamando a la función de arranque del proceso " + this.nodeId + "...");
+			String response = ClientHelper.startProcess(this.nodeIp, nodeIpList, this.nodeId, this.logFolder, this.ntpServer);
+			if (response == "failed" || response == null) {
+				System.out.println("Error: en el proceso 'start' del nodo");
+				System.out.println("Nodo "+ this.nodeId +" finalizado con errores");
+			} else {
+				FileHelper.logFromString(""+this.logFolder + "/" + this.nodeId + "_FinalAdjusted.log", response);
+				System.out.println("Nodo "+ this.nodeId +" finalizado correctamente");
+			}
+		}
 	}
 	
+	/*
+	 * Función principal
+	 * Leemos ficheros de configuración y lanzamos hilos para el arranque simultáneo de los nodos
+	 * @param cfgFile : String, logFolder : String
+	 * */
 	public static void main(String[] args) {
 		String cfgFile;
 		String logFolder;
@@ -50,9 +56,9 @@ public class Launcher extends Thread{
 		int id;
 
 		if (args.length != 2) {
-			System.out.println("Asumiendo ubicación del fichero de cfg y la carpeta de logs");
-			cfgFile = "/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/ssdd.cfg";
-			logFolder = "/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/log";
+			System.out.println("Asumiendo ubicación del fichero de cfg y la carpeta de logs\ncfg: ' ./ssdd.cfg'\nlog: ' ./log'");
+			cfgFile = "./ssdd.cfg";
+			logFolder = "./log";
 		} else {
 			cfgFile = args[0];
 			logFolder = args[1];
@@ -60,23 +66,24 @@ public class Launcher extends Thread{
 		
 		ArrayList<String> ipList = FileHelper.getListIP(cfgFile);
 		if (ipList == null) {
-			System.out.println("Fichero de configuración inaccesible");
+			System.out.println("Error: Fichero de configuración inaccesible.");
 			System.exit(-2);
+		} else {
+			System.out.println("Fichero de configuración leído correctamente.");
 		}
 		ntpServer = FileHelper.getNTPServer(cfgFile);
-		/*if (FileHelper.folderExists(logFolder)) {
-			System.out.println("Directorio de logs inaccesible");
+		if (!FileHelper.folderExists(logFolder) || ntpServer == null) {
+			System.out.println("Error: Directorio de logs inaccesible.");
 			System.exit(-3);
-		}*/
+		} else {
+			System.out.println("Directorio de logs localizado.");
+		}
 		
-		/*
-		 * Recorremos la lista de IPs
-		 * */
 		id = 0;
 		for (String current_ip : ipList) {
 			Launcher current_launcher = new Launcher(current_ip, id, cfgFile, logFolder, ntpServer);
 			current_launcher.start();
 			id++;
-		}
+		}		
 	}
 }

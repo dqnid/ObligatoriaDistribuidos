@@ -47,6 +47,7 @@ public class Node {
 					this.getClass().wait();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
+					return "System error on wait() call";
 				}
 			}
 		}
@@ -68,7 +69,7 @@ public class Node {
 		this.state = LIBERADA;
 		this.ci = 0;
 				
-		if (ipList == null || this.p < 0) { return "Fallo"; }
+		if (ipList == null || this.p < 0) { return "failed"; }
 		
 		ntp_values_pre = ClientHelper.requestNTP(ntpServer, 10);
 		Random rand = new Random();
@@ -86,7 +87,7 @@ public class Node {
 			
 			int response = ClientHelper.requestEntry(this.ipList, this.ti, this.p);
 			if (response < 0) {
-				return "Fallo";
+				return "failed";
 			}
 	
 			this.state = TOMADA;
@@ -99,7 +100,6 @@ public class Node {
 				e.printStackTrace();
 			}
 			FileHelper.log(""+logFolder+"/"+this.p+".log", this.p, 'S', System.currentTimeMillis());
-			System.out.println("Soy " + this.p + " y entro en la zona");
 
 			/*
 			 * Free SC

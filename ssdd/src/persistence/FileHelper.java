@@ -207,7 +207,6 @@ public class FileHelper {
 		}
 	}
 	
-	//no funciona
 	public static boolean folderExists(String route_to_folder) {
 		Path path = Paths.get(route_to_folder);
 		return Files.exists(path);
