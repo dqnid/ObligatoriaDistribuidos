@@ -1,86 +1,102 @@
 package ssdd;
 
-import java.net.URI;
 import java.util.ArrayList;
 
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.UriBuilder;
-
 import persistence.FileHelper;
+import util.ClientHelper;
 
 public class Launcher extends Thread{
 	String cfgFile;
-	String mi_ip;
+	String nodeIp;
 	String logFolder;
 	String ntpServer;
-	int mi_id;
+	int nodeId;
 	
-	public Launcher(String mi_ip, int mi_id, String cfgFile,String logFolder,String ntpServer) {
-		this.mi_ip = mi_ip;
-		this.mi_id = mi_id;
+	public Launcher(String nodeIp, int nodeId, String cfgFile,String logFolder,String ntpServer) {
+		this.nodeIp = nodeIp;
+		this.nodeId = nodeId;
 		this.logFolder = logFolder;
 		this.cfgFile = cfgFile;
 		this.ntpServer = ntpServer;
 	}
 	
+	/*
+	 * El arranque del servidor se hace en hilos (6 en total, 2 por máquina) 
+	 * Dependencias (acoplamiento):
+	 * - FileHelper para obtener el listado de IPs y escribir el log ajustado que ha devuelto el servidor
+	 * - ClientHelper para lanzar la petición GET al servidor.
+	 */
 	public void run() {
-		/*
-		 * Antes de contactar con el servidor (GET) separamos el identificador
-		 * Al servidor le enviamos
-		 * - ip_list_nodos : lista de ips formateada
-		 * - current_ip : ip propia
-		 * - id : identificador
-		 */
-		String ip_list_nodos = FileHelper.getFormatedIPList(cfgFile,mi_ip);
-		
-		Client client=ClientBuilder.newClient();
-		URI uri=UriBuilder.fromUri("http://"+ mi_ip + "/ssdd/").build();
-		WebTarget target = client.target(uri);
-		
-		System.out.println("Server: " + this.mi_ip + " NTP: "+this.ntpServer);
-		
-		String respuesta = target.path("node").path("start").queryParam("ipList", ip_list_nodos).queryParam("id", mi_id).queryParam("logFolder", this.logFolder).queryParam("ntpServer", this.ntpServer).request(MediaType.TEXT_PLAIN).get(String.class);
-		FileHelper.logFromString(""+this.logFolder + "/" + this.mi_id + "_FinalAdjusted.log", respuesta);
-		System.out.println("Finalizado");
+		String nodeIpList = FileHelper.getFormatedIPList(cfgFile,nodeIp);
+		String msg;
+		String currentThreadLogPath = this.logFolder+"/thread"+this.nodeId + ".log";
+		if (nodeIpList == null) {
+			msg = "Error: durante la obtención de la lista de IPs.\nNodo \"+ this.nodeId +\" finalizado con errores";
+			FileHelper.log(currentThreadLogPath, msg, true);
+		} else {
+			msg = "Llamando a la función de arranque del proceso " + this.nodeId + "...";
+			FileHelper.log(currentThreadLogPath, msg, true);
+			String response = ClientHelper.startProcess(this.nodeIp, nodeIpList, this.nodeId, this.logFolder, this.ntpServer);
+			if (response == "failed" || response == null) {
+				msg = "Error: en el proceso 'start' del nodo\nNodo \"+ this.nodeId +\" finalizado con errores";
+			} else {
+				FileHelper.logTimesFromString(""+this.logFolder + "/" + this.nodeId + "_FinalAdjusted.log", response);
+				msg = "Nodo "+ this.nodeId +" finalizado correctamente";
+			}
+			FileHelper.log(currentThreadLogPath, msg, true);
+		}
 	}
 	
+	/*
+	 * Función principal
+	 * Leemos ficheros de configuración y lanzamos hilos para el arranque simultáneo de los nodos
+	 * @param cfgFile : String, logFolder : String
+	 * */
 	public static void main(String[] args) {
 		String cfgFile;
 		String logFolder;
 		String ntpServer;
+		String logMsg;
+		String mainThreadLogPath;
 		int id;
 
 		if (args.length != 2) {
-			System.out.println("Asumiendo ubicación del fichero de cfg y la carpeta de logs");
-			cfgFile = "/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/ssdd.cfg";
-			logFolder = "/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/log";
+			logMsg = "Asumiendo ubicación del fichero de cfg y la carpeta de logs\\ncfg: ' ./ssdd.cfg'\\nlog: ' ./log'";
+			cfgFile = "./ssdd.cfg";
+			logFolder = "./log";
 		} else {
 			cfgFile = args[0];
 			logFolder = args[1];
+			logMsg = "Parámetros obtenidos de argumentos:\n- Fichero de configuración: " + cfgFile + "\n- Directorio de logs: " + logFolder;
 		}
+		
+		mainThreadLogPath = logFolder +"/mainThread" + ".log";
+		FileHelper.log(logFolder+"/mainThread" + ".log", logMsg, true);
 		
 		ArrayList<String> ipList = FileHelper.getListIP(cfgFile);
 		if (ipList == null) {
-			System.out.println("Fichero de configuración inaccesible");
+			logMsg = "Error: Fichero de configuración inaccesible.";
+			FileHelper.log(mainThreadLogPath, logMsg, true);
 			System.exit(-2);
 		}
-		ntpServer = FileHelper.getNTPServer(cfgFile);
-		/*if (FileHelper.folderExists(logFolder)) {
-			System.out.println("Directorio de logs inaccesible");
-			System.exit(-3);
-		}*/
 		
-		/*
-		 * Recorremos la lista de IPs
-		 * */
+		logMsg = "Fichero de configuración leído correctamente.";
+		FileHelper.log(mainThreadLogPath, logMsg, true);
+			
+		ntpServer = FileHelper.getNTPServer(cfgFile);
+		if (!FileHelper.folderExists(logFolder) || ntpServer == null) {
+			logMsg = "Error: Directorio de logs inaccesible.";
+			FileHelper.log(mainThreadLogPath, logMsg, true);
+			System.exit(-3);
+		}
+		logMsg = "Directorio de logs localizado.";
+		FileHelper.log(mainThreadLogPath, logMsg, true);
+		
 		id = 0;
 		for (String current_ip : ipList) {
 			Launcher current_launcher = new Launcher(current_ip, id, cfgFile, logFolder, ntpServer);
 			current_launcher.start();
 			id++;
-		}
+		}		
 	}
 }

@@ -14,14 +14,14 @@ import java.util.Scanner;
  * Helper class to manage all file IO
  * */
 public class FileHelper {
-	public static int log(String route,int id, char action, long time) {
-   	 	String newline = System.getProperty("line.separator");
+	public static int log(String route, String msg, boolean printMsg) {
+		String newline = System.getProperty("line.separator");
 	    try {
 			File file = new File(route);
 	        file.createNewFile();
 	        try {
 	        	FileWriter myWriter = new FileWriter(route,true);
-	        	myWriter.append("P" + id + " " + action + " " + time);
+	        	myWriter.append(msg);
 	        	myWriter.append(newline);
 	        	myWriter.close();
 	        } catch (IOException e) {
@@ -34,10 +34,14 @@ public class FileHelper {
 	        e.printStackTrace();
 	        return -1;
 	      }
+	    if (printMsg) {
+	    	System.out.println(msg);
+	    }
 		return 0;
 	}
 	
-	public static int adjustLog(String route_to_file, long delay){
+	public static String adjustLog(String route_to_file, long delay){
+		String log = "";
 		File file = new File(route_to_file);
 	
 		String output_route_to_file = route_to_file + "_adjusted.log";
@@ -52,7 +56,7 @@ public class FileHelper {
 				file_reader = new Scanner(file);
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
-				return -1;
+				return null;
 			}
 			while (file_reader.hasNextLine()) {
                 String[] line = file_reader.nextLine().split(" ");
@@ -64,17 +68,18 @@ public class FileHelper {
     	        	myWriter.append("" + line[0] + " " + line[1] + " " + time);
     	        	myWriter.append(newline);
     	        	myWriter.close();
+    	        	log+=line[0] + " " + line[1] + " " + time + ";";
     	        } catch (IOException e) {
     	        	System.out.println("Error en la escritura del log.");
     				file_reader.close();
     	        	e.printStackTrace();
-    	        	return -1;
+    	        	return null;
     	        }
 			}
 			file_reader.close();
-			return 0;
+			return log;
 		}else {
-			return -1;
+			return null;
 		}
 	}
 	
@@ -94,7 +99,6 @@ public class FileHelper {
                 if (line.startsWith("ntp") || line.startsWith("#")) {
                 	continue;
                 }
-                //ipList.add(line + ";");
                 ipList.add(line);
 			}
 			file_reader.close();
@@ -131,29 +135,7 @@ public class FileHelper {
 		}
 	}
 	
-	public static String getLog(String route_to_file){
-		String log = "";
-		File file = new File(route_to_file);
-		if (file.exists()) {
-			Scanner file_reader;
-			try {
-				file_reader = new Scanner(file);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-				return null;
-			}
-			while (file_reader.hasNextLine()) {
-                String line = file_reader.nextLine();
-                log+=line + ";";
-			}
-			file_reader.close();
-			return log;
-		}else {
-			return null;
-		}
-	}
-	
-	public static int logFromString(String route_to_log_file, String logContent) {
+	public static int logTimesFromString(String route_to_log_file, String logContent) {
    	 	String newline = System.getProperty("line.separator");
    	 	String output_route = route_to_log_file;
    	 	String[] logContent_by_line = logContent.split(";");
@@ -207,7 +189,6 @@ public class FileHelper {
 		}
 	}
 	
-	//no funciona
 	public static boolean folderExists(String route_to_folder) {
 		Path path = Paths.get(route_to_folder);
 		return Files.exists(path);

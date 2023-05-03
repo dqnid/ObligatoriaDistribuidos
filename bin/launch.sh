@@ -26,13 +26,17 @@ if test $# -eq 1; then
 	if test $1 == "main"; then
 		printf '\e[38;2;0;119;182m\e[48;2;8;8;8mArrancando proceso principal...\e[0m\n'	
 		java -jar ./bin/ssdd_launcher.jar ./ssdd.cfg ./log
-		printf '\e[38;2;0;119;182m\e[48;2;8;8;8mJuntando logs...\e[0m\n'	
-		./bin/mergeLogs.sh
-		printf '\e[38;2;82;183;136m\e[48;2;8;8;8m============\e[0m\n'	
-		printf '\e[38;2;82;183;136m\e[48;2;8;8;8m¡Todo listo!\e[0m\n'	
-		printf '\e[38;2;82;183;136m\e[48;2;8;8;8m============\e[0m\n'	
-		printf '\e[38;2;255;224;102m\e[48;2;8;8;8mResultado final en ssdd.log\e[0m\n'	
-		printf '\e[38;2;0;119;182m\e[48;2;8;8;8mEjecutando comprobador...\e[0m\n'	
-		java -jar ./bin/ssdd_comprobador.jar ./ssdd.log
+		if test $? -ge 0; then
+			printf '\e[38;2;0;119;182m\e[48;2;8;8;8mJuntando logs...\e[0m\n'	
+			./bin/mergeLogs.sh
+			printf '\e[38;2;82;183;136m\e[48;2;8;8;8m============\e[0m\n'	
+			printf '\e[38;2;82;183;136m\e[48;2;8;8;8m¡Todo listo!\e[0m\n'	
+			printf '\e[38;2;82;183;136m\e[48;2;8;8;8m============\e[0m\n'	
+			printf '\e[38;2;255;224;102m\e[48;2;8;8;8mResultado final en ssdd.log\e[0m\n'	
+			printf '\e[38;2;0;119;182m\e[48;2;8;8;8mEjecutando comprobador...\e[0m\n'	
+			java -jar ./bin/ssdd_comprobador.jar ./ssdd.log
+		else
+			printf '\e[38;2;230;57;70m\e[48;2;8;8;8mError detectado. Ejecución abortada\e[0m\n'	
+		fi
 	fi
 fi
