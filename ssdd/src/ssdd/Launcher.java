@@ -28,19 +28,22 @@ public class Launcher extends Thread{
 	 */
 	public void run() {
 		String nodeIpList = FileHelper.getFormatedIPList(cfgFile,nodeIp);
+		String msg;
+		String currentThreadLogPath = this.logFolder+"/thread"+this.nodeId + ".log";
 		if (nodeIpList == null) {
-			System.out.println("Error: durante la obtención de la lista de IPs.");
-			System.out.println("Nodo "+ this.nodeId +" finalizado con errores");
+			msg = "Error: durante la obtención de la lista de IPs.\nNodo \"+ this.nodeId +\" finalizado con errores";
+			FileHelper.log(currentThreadLogPath, msg, true);
 		} else {
-			System.out.println("Llamando a la función de arranque del proceso " + this.nodeId + "...");
+			msg = "Llamando a la función de arranque del proceso " + this.nodeId + "...";
+			FileHelper.log(currentThreadLogPath, msg, true);
 			String response = ClientHelper.startProcess(this.nodeIp, nodeIpList, this.nodeId, this.logFolder, this.ntpServer);
 			if (response == "failed" || response == null) {
-				System.out.println("Error: en el proceso 'start' del nodo");
-				System.out.println("Nodo "+ this.nodeId +" finalizado con errores");
+				msg = "Error: en el proceso 'start' del nodo\nNodo \"+ this.nodeId +\" finalizado con errores";
 			} else {
-				FileHelper.logFromString(""+this.logFolder + "/" + this.nodeId + "_FinalAdjusted.log", response);
-				System.out.println("Nodo "+ this.nodeId +" finalizado correctamente");
+				FileHelper.logTimesFromString(""+this.logFolder + "/" + this.nodeId + "_FinalAdjusted.log", response);
+				msg = "Nodo "+ this.nodeId +" finalizado correctamente";
 			}
+			FileHelper.log(currentThreadLogPath, msg, true);
 		}
 	}
 	
@@ -53,31 +56,41 @@ public class Launcher extends Thread{
 		String cfgFile;
 		String logFolder;
 		String ntpServer;
+		String logMsg;
+		String mainThreadLogPath;
 		int id;
 
 		if (args.length != 2) {
-			System.out.println("Asumiendo ubicación del fichero de cfg y la carpeta de logs\ncfg: ' ./ssdd.cfg'\nlog: ' ./log'");
+			logMsg = "Asumiendo ubicación del fichero de cfg y la carpeta de logs\\ncfg: ' ./ssdd.cfg'\\nlog: ' ./log'";
 			cfgFile = "./ssdd.cfg";
 			logFolder = "./log";
 		} else {
 			cfgFile = args[0];
 			logFolder = args[1];
+			logMsg = "Parámetros obtenidos de argumentos:\n- Fichero de configuración: " + cfgFile + "\n- Directorio de logs: " + logFolder;
 		}
+		
+		mainThreadLogPath = logFolder +"/mainThread" + ".log";
+		FileHelper.log(logFolder+"/mainThread" + ".log", logMsg, true);
 		
 		ArrayList<String> ipList = FileHelper.getListIP(cfgFile);
 		if (ipList == null) {
-			System.out.println("Error: Fichero de configuración inaccesible.");
+			logMsg = "Error: Fichero de configuración inaccesible.";
+			FileHelper.log(mainThreadLogPath, logMsg, true);
 			System.exit(-2);
-		} else {
-			System.out.println("Fichero de configuración leído correctamente.");
 		}
+		
+		logMsg = "Fichero de configuración leído correctamente.";
+		FileHelper.log(mainThreadLogPath, logMsg, true);
+			
 		ntpServer = FileHelper.getNTPServer(cfgFile);
 		if (!FileHelper.folderExists(logFolder) || ntpServer == null) {
-			System.out.println("Error: Directorio de logs inaccesible.");
+			logMsg = "Error: Directorio de logs inaccesible.";
+			FileHelper.log(mainThreadLogPath, logMsg, true);
 			System.exit(-3);
-		} else {
-			System.out.println("Directorio de logs localizado.");
 		}
+		logMsg = "Directorio de logs localizado.";
+		FileHelper.log(mainThreadLogPath, logMsg, true);
 		
 		id = 0;
 		for (String current_ip : ipList) {

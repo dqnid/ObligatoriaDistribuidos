@@ -92,14 +92,14 @@ public class Node {
 	
 			this.state = TOMADA;
 			this.ci+=1;
-			FileHelper.log(""+logFolder+"/"+this.p+".log", this.p, 'E', System.currentTimeMillis());
+			FileHelper.log(logFolder+"/"+this.p+".log", this.p + " E " + System.currentTimeMillis(), false);
 			try {
 				int rand_time = rand.nextInt((300 - 100) + 1) + 100;
 				Thread.sleep((long)rand_time);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			FileHelper.log(""+logFolder+"/"+this.p+".log", this.p, 'S', System.currentTimeMillis());
+			FileHelper.log(logFolder+"/"+this.p+".log", this.p + " S " + System.currentTimeMillis(), false);
 
 			/*
 			 * Free SC
@@ -114,10 +114,9 @@ public class Node {
 		this.ntp_values[0] = (ntp_values_pre[0] + ntp_values_post[0]) / 2;
 		this.ntp_values[1] = (ntp_values_pre[1] + ntp_values_post[1]) / 2;
 
-		FileHelper.adjustLog(""+logFolder+"/"+this.p+".log", this.ntp_values[1]);
-		
-		String log = FileHelper.getLog(""+logFolder+"/"+this.p+".log" + "_adjusted.log");
-		
+		FileHelper.log(logFolder+"/ntp_delay_node" + this.p + ".log", "" + ntp_values[1], false);
+		String log = FileHelper.adjustLog(logFolder+"/"+this.p+".log", this.ntp_values[1]);
+				
 		return log;
 	}
 	
