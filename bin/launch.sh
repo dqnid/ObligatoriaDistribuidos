@@ -34,7 +34,13 @@ if test $# -eq 1; then
 			printf '\e[38;2;82;183;136m\e[48;2;8;8;8m============\e[0m\n'	
 			printf '\e[38;2;255;224;102m\e[48;2;8;8;8mResultado final en ssdd.log\e[0m\n'	
 			printf '\e[38;2;0;119;182m\e[48;2;8;8;8mEjecutando comprobador...\e[0m\n'	
-			java -jar ./bin/ssdd_comprobador.jar ./ssdd.log
+			if [[ -f "./log/ntp_delay_node2.log" ]] && [[ -f "./log/ntp_delay_node4.log" ]]; then
+				ntp2=$(cat ./log/ntp_delay_node2.log)
+				ntp4=$(cat ./log/ntp_delay_node4.log)
+				java -jar ./bin/ssdd_comprobador.jar ./ssdd.log $ntp2 $ntp4
+			else
+				java -jar ./bin/ssdd_comprobador.jar ./ssdd.log
+			fi
 		else
 			printf '\e[38;2;230;57;70m\e[48;2;8;8;8mError detectado. Ejecución abortada\e[0m\n'	
 		fi
