@@ -2,17 +2,28 @@
 * Sistemas Distribuidos, Universidad de Salamanca
 * Curso 2022 - 2023
 
+## Lanzamiento
+Los scripts de lanzamiento deben ser lanzados desde el directorio raíz.
+* `./bin/launcher.sh` : Lanzará los Tomcat que se encuentren en la carpeta `./tomcat`, copiando el fichero `./bin/ssdd.war` en su directorio de webapps. Antes del lanzamiento tratará de detenerlos. Admite un parámetro `main`, el cual producirá el lanzamiento del programa principal de java y todas las operaciones posteriores a este: unión de logs y lanzamiento del comprobador.
+* `./bin/stop.sh` : detendrá todos los servidores Tomcat encontrados en el directorio `./tomcat`.
+### Secuencia de lanzamiento:
+1. `./bin/launch.sh` en los nodos secundarios.
+2. `./bin/launch.sh main` en el nodo principal.
+
 ## TODO
-- [x] Definir la estructura del fichero de configuración
-	- [x] Usar el launcher para que envíe las IPs y los puertos
-- [x] En start hacer que la petición de entrada a SC sea concurrente (quitar el for), con threads
-- [  ] Hacer otro endpoint GET que se use para notificar
-- [  ] Modificar el join para que guarde los elementos en la cola y responda 1 o 0
-- [  ] Implementar una cola con las direcciones y puertos (en el mismo string) de los procesos solicitantes
-- [x] Crear el proceso main 'launcher' que llame a los start de todos los procesos
-- [  ] Lanzar de manera no cutre los procesos en un solo Tomcat
-- [x] Generar logs
-- [x] Corregir error de interbloqueo durante los 2 primero ciclos 
+* [x] Definir la estructura del fichero de configuración
+	* [x] Usar el launcher para que envíe las IPs y los puertos
+* [x] En start hacer que la petición de entrada a SC sea concurrente (quitar el for), con threads
+* [x] Crear el proceso main 'launcher' que llame a los start de todos los procesos
+	* [x] Usar hilos durante el lanzamiento
+* [x] Generar logs
+* [x] Escribir escript de lanzamiento para agilizar el proceso
+* [x] Corregir error de interbloqueo durante los 2 primero ciclos
+* [x] Crear endpoint NTP
+	* [x] Ajustar fichero de configuración para admitir NTP
+	* [x] Ajustar logs con offset NTP
+	* [x] Log de delay NTP para comprobador
+* [] Recuperar delays de forma automática con el script de arranque
 
 ## Detalles del sistema desarrollado
 6 procesos repartidos en 3 nodos que gestionan una zona de exclusión mutua común.

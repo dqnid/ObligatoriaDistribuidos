@@ -104,3 +104,22 @@
 04-May-2023 00:11:53.827 INFORMACIÓN [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/danih/Documents/Universidad/Segundo Cuatrimestre/Sistemas Distribuidos/Práctica/Entregas/ObligatoriaDistribuidos/tomcat/apache-tomcat-9_1/webapps/ROOT] has finished in [17] ms
 04-May-2023 00:11:53.834 INFORMACIÓN [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
 04-May-2023 00:11:53.850 INFORMACIÓN [main] org.apache.catalina.startup.Catalina.start Server startup in [2536] milliseconds
+04-May-2023 00:19:54.997 ADVERTENCIA [main] org.apache.catalina.core.StandardServer.await The socket listening for the shutdown command experienced an unexpected timeout [481.140] milliseconds after the call to accept(). Is this an instance of bug 56684?
+	java.net.SocketTimeoutException: Accept timed out
+		at java.base/java.net.PlainSocketImpl.socketAccept(Native Method)
+		at java.base/java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:474)
+		at java.base/java.net.ServerSocket.implAccept(ServerSocket.java:565)
+		at java.base/java.net.ServerSocket.accept(ServerSocket.java:533)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:604)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:864)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:810)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+04-May-2023 00:19:54.999 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+04-May-2023 00:19:55.001 INFORMACIÓN [Thread-1] org.apache.catalina.core.StandardService.stopInternal Parando servicio [Catalina]
+04-May-2023 00:19:55.043 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+04-May-2023 00:19:55.058 INFORMACIÓN [Thread-1] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

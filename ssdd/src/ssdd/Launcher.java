@@ -94,7 +94,7 @@ public class Launcher extends Thread{
 		
 		id = 0;
 		for (String current_ip : ipList) {
-			Launcher current_launcher = new Launcher(current_ip, id, cfgFile, logFolder, ntpServer);
+			Launcher current_launcher = new Launcher(current_ip, id+1, cfgFile, logFolder, ntpServer);
 			current_launcher.start();
 			id++;
 		}		
