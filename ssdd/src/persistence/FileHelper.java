@@ -40,7 +40,7 @@ public class FileHelper {
 		return 0;
 	}
 	
-	public static String adjustLog(String route_to_file, long delay){
+	public static String adjustLog(String route_to_file, long offset){
 		String log = "";
 		File file = new File(route_to_file);
 	
@@ -61,7 +61,7 @@ public class FileHelper {
 			while (file_reader.hasNextLine()) {
                 String[] line = file_reader.nextLine().split(" ");
                 long time = Long.parseLong(line[2]);
-                time += delay;
+                time += offset;
                 try {
                     file_output.createNewFile();
     	        	FileWriter myWriter = new FileWriter(output_route_to_file,true);

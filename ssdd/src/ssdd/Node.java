@@ -115,7 +115,7 @@ public class Node {
 		this.ntp_values[1] = (ntp_values_pre[1] + ntp_values_post[1]) / 2;
 
 		FileHelper.log(logFolder+"/ntp_delay_node" + this.p + ".log", "" + ntp_values[1], false);
-		String log = FileHelper.adjustLog(logFolder+"/"+this.p+".log", this.ntp_values[1]);
+		String log = FileHelper.adjustLog(logFolder+"/"+this.p+".log", this.ntp_values[0]);
 				
 		return log;
 	}
