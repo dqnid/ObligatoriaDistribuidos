@@ -54,7 +54,7 @@ public class ClientHelper extends Thread{
 		for (String target_ip : target_ip_list) 
 		{
 			ClientHelper ch = new ClientHelper(target_ip,t,p);
-			ch.run();	
+			ch.run();
 		}
 		
 		try {
@@ -79,7 +79,7 @@ public class ClientHelper extends Thread{
 		target = client.target(uri);
 		for (int i = 0; i < n_evaluations; i++) {
 			t0 = System.currentTimeMillis();
-			server_times = target.path("node").path("getntp").request(MediaType.TEXT_PLAIN).get(String.class).split(";");
+			server_times = target.path("node").path("ntp").request(MediaType.TEXT_PLAIN).get(String.class).split(";");
 			t1 = Long.parseLong(server_times[0]);
 			t2 = Long.parseLong(server_times[1]);
 			t3 = System.currentTimeMillis();
@@ -94,6 +94,15 @@ public class ClientHelper extends Thread{
 		return bestPair;
 	}
 	
+	public static String requestDelay(String target_ip) {
+		Client client=ClientBuilder.newClient();
+		URI uri=UriBuilder.fromUri("http://"+ target_ip + "/ssdd/").build();
+		WebTarget target = client.target(uri);
+				
+		String respuesta = target.path("node").path("getntp").request(MediaType.TEXT_PLAIN).get(String.class);
+		return respuesta;
+	}
+
 	/*
 	 * El arranque del servidor se hace en hilos (6 en total, 2 por máquina) 
 	 * Al servidor le enviamos:

@@ -8,6 +8,7 @@ printf '\e[38;2;0;119;182m\e[48;2;8;8;8mLimpiando logs...\e[0m\n'
 now="$(date +%d%m%H%M%S)"
 mkdir ./log/old/$now
 mv ./log/*.log ./log/old/$now/
+rm ./ssdd.log
 
 printf '\e[38;2;0;119;182m\e[48;2;8;8;8mIniciando proceso de arranque:\e[0m\n'
 for dir in ./tomcat/*/

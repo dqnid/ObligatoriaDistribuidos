@@ -76,14 +76,14 @@ public class Node {
 		
 		for (int i = 0; i < 100; i++) 
 		{	
-			this.state = BUSCADA;
-			this.ti = this.ci;
 			try {
 				int rand_time = rand.nextInt((500 - 300) + 1) + 300;
 				Thread.sleep(rand_time);
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 			}
+			this.state = BUSCADA;
+			this.ti = this.ci;
 			
 			int response = ClientHelper.requestEntry(this.ipList, this.ti, this.p);
 			if (response < 0) {
@@ -114,20 +114,26 @@ public class Node {
 		this.ntp_values[0] = (ntp_values_pre[0] + ntp_values_post[0]) / 2;
 		this.ntp_values[1] = (ntp_values_pre[1] + ntp_values_post[1]) / 2;
 
-		FileHelper.log(logFolder+"/ntp_delay_node" + this.p + ".log", "" + ntp_values[1], false);
 		String log = FileHelper.adjustLog(logFolder+"/"+this.p+".log", this.ntp_values[0]);
 				
 		return log;
+	}
+	
+	@Path("ntp")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public String ntp(){
+		long[]  t = {0,0};
+
+		t[0] = System.currentTimeMillis();
+		t[1] = System.currentTimeMillis();
+		return ""+t[0]+";"+t[1];
 	}
 	
 	@Path("getntp")
 	@GET
 	@Produces(MediaType.TEXT_PLAIN)
 	public String getntp(){
-		long[]  t = {0,0};
-
-		t[0] = System.currentTimeMillis();
-		t[1] = System.currentTimeMillis();
-		return ""+t[0]+";"+t[1];
+		return ""+this.ntp_values[1];
 	}
 }

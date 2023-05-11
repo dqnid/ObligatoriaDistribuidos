@@ -44,6 +44,7 @@ public class Launcher extends Thread{
 				msg = "Nodo "+ this.nodeId +" finalizado correctamente";
 			}
 			FileHelper.log(currentThreadLogPath, msg, true);
+			FileHelper.log(logFolder+"/ntp_delay_node" + this.nodeId + ".log", "" + ClientHelper.requestDelay(this.nodeIp), false);
 		}
 	}
 	
